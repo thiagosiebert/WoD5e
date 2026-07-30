@@ -1,0 +1,107 @@
+{{!-- Vampire Sheet Header (V5 Official Theme) --}}
+<div class="v5-official-theme">
+    <header class="actor-header v5-header" {{#if headerbg}} style="background: url({{headerbg}}) center;"{{/if}}>
+        
+        <div class="v5-logo-section">
+            <h1 class="v5-logo">VAMPIRO</h1>
+            <h2 class="v5-sublogo">A MÁSCARA</h2>
+            <div class="v5-ankh">&#9765;</div>
+        </div>
+
+        <div class="v5-header-grid">
+            <!-- Row 1 -->
+            <div class="v5-grid-item">
+                <span class="v5-label">Nome</span>
+                {{#if locked}}
+                    <span class="v5-value">{{name}}</span>
+                {{else}}
+                    <input name="name" type="text" value="{{name}}" />
+                {{/if}}
+            </div>
+            <div class="v5-grid-item">
+                <span class="v5-label">Conceito</span>
+                {{#if locked}}
+                    <span class="v5-value">{{actor.system.headers.concept}}</span>
+                {{else}}
+                    <input name="system.headers.concept" type="text" value="{{actor.system.headers.concept}}" />
+                {{/if}}
+            </div>
+            <div class="v5-grid-item">
+                <span class="v5-label">Predador</span>
+                <div class="resource-content">
+                    {{> "systems/wod5e/display/shared/actors/partials/dynamic-item-display.hbs" item=predatorType type="predatorType"}}
+                </div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="v5-grid-item">
+                <span class="v5-label">Crônica</span>
+                {{#if locked}}
+                    <span class="v5-value">{{actor.system.headers.chronicle}}</span>
+                {{else}}
+                    <input name="system.headers.chronicle" type="text" value="{{actor.system.headers.chronicle}}" />
+                {{/if}}
+            </div>
+            <div class="v5-grid-item">
+                <span class="v5-label">Ambição</span>
+                {{#if locked}}
+                    <span class="v5-value">{{actor.system.headers.ambition}}</span>
+                {{else}}
+                    <input name="system.headers.ambition" type="text" value="{{actor.system.headers.ambition}}" />
+                {{/if}}
+            </div>
+            <div class="v5-grid-item">
+                <span class="v5-label">Clã</span>
+                <div class="resource-content">
+                    {{> "systems/wod5e/display/shared/actors/partials/dynamic-item-display.hbs" item=clan type="clan"}}
+                </div>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="v5-grid-item">
+                <span class="v5-label">Senhor</span>
+                {{#if locked}}
+                    <span class="v5-value">{{actor.system.headers.sire}}</span>
+                {{else}}
+                    <input name="system.headers.sire" type="text" value="{{actor.system.headers.sire}}" />
+                {{/if}}
+            </div>
+            <div class="v5-grid-item">
+                <span class="v5-label">Desejo</span>
+                {{#if locked}}
+                    <span class="v5-value">{{actor.system.headers.desire}}</span>
+                {{else}}
+                    <input name="system.headers.desire" type="text" value="{{actor.system.headers.desire}}" />
+                {{/if}}
+            </div>
+            <div class="v5-grid-item">
+                <span class="v5-label">Geração</span>
+                {{#if locked}}
+                    <span class="v5-value">{{actor.system.headers.generation}}</span>
+                {{else}}
+                    <input name="system.headers.generation" type="text" value="{{actor.system.headers.generation}}" />
+                {{/if}}
+            </div>
+        </div>
+
+        <div class="v5-header-trackers flexrow">
+            {{!-- Health Tracker --}}
+            {{> "systems/wod5e/display/shared/actors/parts/health.hbs"}}
+            
+            {{!-- Willpower Tracker --}}
+            {{> "systems/wod5e/display/shared/actors/parts/willpower.hbs"}}
+            
+            <div class="flexcol field-section" style="margin-left: 20px;">
+                <label class="resource-label field-header">{{localize "WOD5E.VTM.Hunger"}}</label>
+                <div class="flexrow" style="align-items: center; justify-content: center;">
+                    {{> "systems/wod5e/display/vtm/actors/parts/hunger.hbs"}}
+                    {{> "systems/wod5e/display/vtm/actors/parts/rouse.hbs"}}
+                </div>
+            </div>
+        </div>
+        
+        <div class="profile-image-container" style="position: absolute; right: 20px; top: 20px;">
+            <img class="profile-img" data-action="editImage" src="{{img}}" data-edit="img" title="{{actor.name}}" style="width: 100px; height: 100px; object-fit: cover; border: 2px solid #7a1118;"/>
+        </div>
+    </header>
+</div>

@@ -1,0 +1,553 @@
+// Data preparation functions
+import { getActorHeader } from './scripts/get-actor-header.js'
+import { getActorBackground } from './scripts/get-actor-background.js'
+import { getActorTypes } from './scripts/get-actor-types.js'
+// Actor UX functions
+import { ActorUX } from './scripts/actor-ux.js'
+// Roll function
+import { _onRoll } from './scripts/roll.js'
+// Resource functions
+import {
+  _onResourceChange,
+  _setupDotCounters,
+  _setupSquareCounters,
+  _onDotCounterChange,
+  _onDotCounterEmpty,
+  _onSquareCounterChange,
+  _onRemoveSquareCounter
+} from './scripts/counters.js'
+// Various button functions
+import { _onRollItem } from './scripts/item-roll.js'
+import { _onEditImage } from './scripts/on-edit-image.js'
+import { _onToggleLock } from './scripts/on-toggle-lock.js'
+import { _onEditSkill } from './scripts/on-edit-skill.js'
+import { _onAddExperience, _onRemoveExperience, _onEditExperience } from './scripts/experience.js'
+import {
+  _onCreateItem,
+  _onItemChat,
+  _onItemOpen,
+  _onItemDelete,
+  _onSearchItem
+} from './scripts/item-actions.js'
+import { _onWillpowerRoll } from './scripts/on-willpower-roll.js'
+import { _onToggleCollapse } from './scripts/on-toggle-collapse.js'
+import { _onToggleLimited } from './scripts/on-toggle-limited.js'
+import { _onRestoreItemUses, _onExpendItemUse } from './scripts/item-uses.js'
+import {
+  prepareBiographyContext,
+  prepareEquipmentContext,
+  prepareExperienceContext,
+  prepareFeaturesContext,
+  prepareLimitedContext,
+  prepareNotepadContext,
+  prepareSettingsContext,
+  prepareSpcStatsContext,
+  prepareStatsContext
+} from './scripts/prepare-partials.js'
+import { _onToggleConditionSuppression } from './scripts/toggle-condition-suppression.js'
+// Mixin
+const { HandlebarsApplicationMixin } = foundry.applications.api
+
+/**
+ * Extend the base ActorSheetV2 document
+ * @extends {foundry.applications.sheets.ActorSheetV2}
+ */
+export class WoDActorBase extends HandlebarsApplicationMixin(
+  foundry.applications.sheets.ActorSheetV2
+) {
+  get title() {
+    return this.actor.isToken ? `[Token] ${this.actor.name}` : this.actor.name
+  }
+
+  constructor(options = {}) {
+    super(options)
+
+    this.#dragDrop = this.#createDragDropHandlers()
+    this._collapsibleStates = new Map()
+  }
+
+  static DEFAULT_OPTIONS = {
+    form: {
+      submitOnChange: true,
+      handler: WoDActorBase.onSubmitActorForm
+    },
+    window: {
+      icon: 'fa-solid fa-dice-d10',
+      resizable: true
+    },
+    classes: ['wod5e', 'actor', 'sheet'],
+    position: {
+      width: 1000,
+      height: 800
+    },
+    actions: {
+      // Rollable actions
+      roll: _onRoll,
+      willpowerRoll: _onWillpowerRoll,
+
+      // Item actions
+      createItem: _onCreateItem,
+      searchItem: _onSearchItem,
+      rollItem: _onRollItem,
+      itemChat: _onItemChat,
+      itemOpen: _onItemOpen,
+      itemDelete: _onItemDelete,
+      expendItemUse: _onExpendItemUse,
+      restoreItemUses: _onRestoreItemUses,
+
+      // Various other sheet functions
+      dotCounterChange: _onDotCounterChange,
+      dotCounterEmpty: _onDotCounterEmpty,
+      editImage: _onEditImage,
+      editSkill: _onEditSkill,
+      toggleLock: _onToggleLock,
+      toggleLimited: _onToggleLimited,
+      toggleCollapse: _onToggleCollapse,
+      addExperience: _onAddExperience,
+      removeExperience: _onRemoveExperience,
+      editExperience: _onEditExperience,
+      toggleConditionSuppression: _onToggleConditionSuppression
+    },
+    dragDrop: [
+      {
+        dragSelector: '[data-drag]',
+        dropSelector: null
+      }
+    ]
+  }
+
+  _getHeaderControls() {
+    const controls = super._getHeaderControls()
+
+    return controls
+  }
+
+  tabGroups = {
+    primary: 'stats'
+  }
+
+  tabs = {}
+
+  getTabs() {
+    const tabs = this.tabs
+
+    // Remove hidden tabs
+    for (const key in tabs) {
+      if (tabs[key].hidden) delete tabs[key]
+    }
+
+    for (const tab of Object.values(tabs)) {
+      tab.active = this.tabGroups[tab.group] === tab.id
+      tab.cssClass = tab.active ? 'active' : ''
+    }
+
+    return tabs
+  }
+
+  async _prepareContext() {
+    // Top-level variables
+    const data = await super._prepareContext()
+    const actor = this.actor
+    const actorData = actor.system
+
+    // Prepare tabs
+    data.tabs = this.getTabs()
+
+    // Define the data the template needs
+
+    // Prepare items
+    await this.prepareItems(actor)
+
+    // Actor types that can be swapped to and data prep for it
+    const actorTypeData = await getActorTypes(actor)
+
+    // Determine whether we show legacy XP depending on if the legacy values are filled or not
+    const showLegacyXP = actorData.exp
+      ? Number(actorData.exp.value) || Number(actorData.exp.max)
+      : false
+
+    let locked = true
+    const userOwnsActor =
+      actor?.testUserPermission(game.user, CONST.DOCUMENT_OWNERSHIP_LEVELS.OWNER) ?? false
+    if (userOwnsActor) {
+      locked = actorData.locked
+    }
+
+    // Transform any data needed for sheet rendering
+    return {
+      ...data,
+
+      name: actor.name,
+      img: actor.img,
+
+      health: actorData.health,
+      willpower: actorData.willpower,
+
+      settings: actorData.settings,
+
+      hasSkillAttributeData: actorData.hasSkillAttributeData,
+      gamesystem: actorData.gamesystem,
+      isOwner: actor.isOwner,
+      locked,
+      showLegacyXP,
+
+      features: actorData.features,
+
+      displayBanner: game.settings.get('wod5e', 'actorBanner'),
+
+      headerbg: await getActorHeader(actor),
+      actorbg: actor.system?.settings?.background,
+
+      baseActorType: actorTypeData.baseActorType,
+      currentActorType: actorTypeData.currentActorType,
+      currentTypeLabel: actorTypeData.currentTypeLabel,
+      actorTypePath: actorTypeData.typePath,
+      actorOptions: actorTypeData.types
+    }
+  }
+
+  async prepareItems(sheetData) {
+    // Make an array to store item-based modifiers
+    sheetData.system.itemModifiers = []
+
+    // Do data manipulation we need to do for ALL items here
+    sheetData.items.forEach(async (item) => {
+      // Enrich item descriptions
+      if (item.system?.description) {
+        item.system.enrichedDescription =
+          await foundry.applications.ux.TextEditor.implementation.enrichHTML(
+            item.system.description
+          )
+      }
+
+      // Calculate item modifiers and shuffle them into system.itemModifiers
+      if (!foundry.utils.isEmpty(item.system.bonuses) && !item?.system?.suppressed) {
+        sheetData.system.itemModifiers = sheetData.system.itemModifiers.concat(item.system.bonuses)
+      }
+    })
+
+    // Custom rolls
+    sheetData.system.customRolls = sheetData.items
+      .filter((item) => item.type === 'customRoll')
+      .sort(function (roll1, roll2) {
+        return roll1.sort - roll2.sort
+      })
+
+    // Conditions
+    sheetData.system.conditions = sheetData.items
+      .filter((item) => item.type === 'condition')
+      .sort(function (roll1, roll2) {
+        return roll1.sort - roll2.sort
+      })
+
+    // Traits
+    sheetData.system.traits = sheetData.items
+      .filter((item) => item.type === 'trait')
+      .sort(function (roll1, roll2) {
+        return roll1.sort - roll2.sort
+      })
+
+    // Features
+    sheetData.system.features = sheetData.items.reduce(
+      (acc, item) => {
+        if (item.type === 'feature') {
+          // Assign to featuretype container, default to 'background' if unset
+          const featuretype = item.system.featuretype || 'background'
+          if (acc[featuretype]) {
+            acc[featuretype].push(item)
+          } else {
+            // Create new array if it doesn't exist
+            acc[featuretype] = [item]
+          }
+        } else if (item.type === 'boon') {
+          acc.boon.push(item)
+        }
+
+        return acc
+      },
+      {
+        // Containers for features
+        background: [],
+        merit: [],
+        flaw: [],
+        boon: []
+      }
+    )
+
+    // Remove Boons if we have no boons and the actor isn't a vampire
+    if (sheetData.system.features.boon.length === 0 && sheetData.system.gamesystem !== 'vampire')
+      delete sheetData.system.features.boon
+
+    // Equipment
+    sheetData.system.equipmentItems = sheetData.items.reduce(
+      (acc, item) => {
+        switch (item.type) {
+          case 'armor':
+            acc.armor.push(item)
+            break
+          case 'weapon':
+            acc.weapon.push(item)
+            break
+          case 'gear':
+            acc.gear.push(item)
+            break
+          case 'talisman':
+            acc.talisman.push(item)
+            break
+        }
+
+        return acc
+      },
+      {
+        // Containers for equipment
+        armor: [],
+        weapon: [],
+        gear: [],
+        talisman: []
+      }
+    )
+
+    // Remove Talismans if we have no boons and the actor isn't a werewolf
+    if (
+      sheetData.system.equipmentItems.talisman.length === 0 &&
+      sheetData.system.gamesystem !== 'werewolf'
+    )
+      delete sheetData.system.equipmentItems.talisman
+  }
+
+  static async onSubmitActorForm(event, form, formData) {
+    const target = event.target
+
+    // We do this because it was supported in the old system, and we still want
+    // users to be able to change between character types painlessly
+    if (target.name === 'type') {
+      // Maintain a copy of the old 'system' object
+      const oldSystemObject = foundry.utils.deepClone(this.actor.system)
+
+      // Update the actor type (Foundry requires you to replace the 'system' object while doing this)
+      await this.actor.update(
+        {
+          type: target.value,
+          system: {}
+        },
+        {
+          recursive: false
+        }
+      )
+
+      // Ensure the actor's old data gets put back in place
+      await this.actor.update({
+        system: oldSystemObject
+      })
+    }
+
+    // Handle odd quirks with updating special inputs
+    if (target.tagName === 'INPUT') {
+      let value
+
+      // Handle numbers and strings properly
+      if (target.type === 'number') {
+        value = parseInt(target.value)
+      } else if (target.type === 'checkbox') {
+        value = target.checked
+      } else {
+        value = target.value
+      }
+
+      // Make the update for the field
+      this.actor.update({
+        [`${target.name}`]: value
+      })
+    } else {
+      // Process submit data
+      const submitData = this._prepareSubmitData(event, form, formData)
+
+      // Overrides
+      const overrides = foundry.utils.flattenObject(this.actor.overrides)
+      for (const k of Object.keys(overrides)) delete submitData[k]
+
+      const submitDataFlat = foundry.utils.flattenObject(submitData)
+      const updatedData = {
+        [target.name]: submitDataFlat[target.name]
+      }
+      const expandedData = foundry.utils.expandObject(updatedData)
+
+      // Update the actor data
+      await this.actor.update(expandedData)
+    }
+  }
+
+  _configureRenderOptions(options) {
+    super._configureRenderOptions(options)
+
+    // If the document is in limited view, only show the limited view;
+    // otherwise, don't include the limited part
+    if (this.document.limited) {
+      options.parts = ['limited']
+    } else {
+      options.parts = options.parts.filter((item) => item !== 'limited')
+    }
+  }
+
+  _preRender() {
+    ActorUX._saveScrollPositions(this)
+    ActorUX._saveCollapsibleStates(this)
+  }
+
+  async _onRender() {
+    const html = this.element
+
+    // Update the window title (since ActorSheetV2 doesn't do it automatically)
+    this.window.title.textContent = this.title
+
+    // Update the actor background if it's not the default
+    const actorBackground = await getActorBackground(this.actor)
+    if (actorBackground) {
+      html.querySelector('section.window-content').style.background = `url("${actorBackground}")`
+    } else {
+      html.querySelector('section.window-content').style.background = ''
+    }
+
+    html.querySelectorAll('.actor-header-bg-filepicker input').forEach((input) => {
+      input.addEventListener('focusout', function (event) {
+        event.preventDefault()
+
+        const filepicker = event?.target?.parentElement
+        const value = event?.target?.value
+
+        filepicker.value = value
+      })
+    })
+
+    html.querySelectorAll('.actor-background-filepicker input').forEach((input) => {
+      input.addEventListener('focusout', function (event) {
+        event.preventDefault()
+
+        const filepicker = event?.target?.parentElement
+        const value = event?.target?.value
+
+        filepicker.value = value
+      })
+    })
+
+    // Toggle whether the sheet is locked or not
+    if (this.actor.system.locked) {
+      html.classList.add('locked')
+    } else {
+      html.classList.remove('locked')
+    }
+
+    // Resource square counters
+    html.querySelectorAll('.resource-counter.editable .resource-counter-step').forEach((el) => {
+      el.addEventListener('click', _onSquareCounterChange.bind(this))
+      el.addEventListener('contextmenu', _onRemoveSquareCounter.bind(this))
+    })
+    html.querySelectorAll('.resource-plus').forEach((el) => {
+      el.addEventListener('click', _onResourceChange.bind(this))
+    })
+    html.querySelectorAll('.resource-minus').forEach((el) => {
+      el.addEventListener('click', _onResourceChange.bind(this))
+    })
+
+    // Activate the setup for the counters
+    _setupDotCounters(html)
+    _setupSquareCounters(html)
+
+    // Drag and drop functionality
+    this.#dragDrop.forEach((d) => d.bind(this.element))
+
+    // Keep scroll positions from resetting on sheet update
+    ActorUX._restoreScrollPositions(this)
+    ActorUX._restoreCollapsibleStates(this)
+  }
+
+  #createDragDropHandlers() {
+    return this.options.dragDrop.map((d) => {
+      d.permissions = {
+        dragstart: this._canDragStart.bind(this),
+        drop: this._canDragDrop.bind(this)
+      }
+
+      d.callbacks = {
+        dragstart: this._onDragStart.bind(this),
+        dragover: this._onDragOver.bind(this),
+        drop: this._onDrop.bind(this)
+      }
+      return new foundry.applications.ux.DragDrop(d)
+    })
+  }
+
+  #dragDrop
+
+  _canDragStart() {
+    return this.isEditable
+  }
+
+  _canDragDrop() {
+    return this.isEditable
+  }
+
+  _onDragStart(event) {
+    const dataset = event.target.dataset
+    if ('link' in dataset) return
+
+    // Extract the data you need
+    const dragData = {
+      type: dataset.type,
+      uuid: dataset.documentUuid
+    }
+
+    if (!dragData) return
+
+    // Set data transfer
+    event.dataTransfer.setData('text/plain', JSON.stringify(dragData))
+  }
+
+  _onDragOver() {}
+
+  async _onDrop(event) {
+    const data = foundry.applications.ux.TextEditor.implementation.getDragEventData(event)
+
+    // Handle different data types
+    switch (data.type) {
+      case 'Item':
+        return ActorUX._onDropItem(event, this.actor, data)
+    }
+  }
+
+  prepareStatsContext(context, actor) {
+    return prepareStatsContext(context, actor)
+  }
+
+  prepareExperienceContext(context, actor) {
+    return prepareExperienceContext(context, actor)
+  }
+
+  prepareFeaturesContext(context, actor) {
+    return prepareFeaturesContext(context, actor)
+  }
+
+  prepareEquipmentContext(context, actor) {
+    return prepareEquipmentContext(context, actor)
+  }
+
+  prepareBiographyContext(context, actor) {
+    return prepareBiographyContext(context, actor)
+  }
+
+  prepareNotepadContext(context, actor) {
+    return prepareNotepadContext(context, actor)
+  }
+
+  prepareSettingsContext(context, actor) {
+    return prepareSettingsContext(context, actor)
+  }
+
+  prepareLimitedContext(context, actor) {
+    return prepareLimitedContext(context, actor)
+  }
+
+  prepareSpcStatsContext(context, actor) {
+    return prepareSpcStatsContext(context, actor)
+  }
+}
