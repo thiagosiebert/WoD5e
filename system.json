@@ -4,8 +4,8 @@
   "description": "World of Darkness 5e system modificado por Thiago Siebert",
   "version": "5.3.23",
   "compatibility": {
-    "minimum": "14",
-    "verified": "14.365",
+    "minimum": "11",
+    "verified": "13",
     "maximum": ""
   },
   "authors": [
