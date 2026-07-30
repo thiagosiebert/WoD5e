@@ -1,0 +1,165 @@
+// 1. Busca todos os atores do mundo que pertencem a um jogador E que possuem a variável Fome
+const actors = game.actors.filter(a => a.hasPlayerOwner && a.system?.hunger !== undefined);
+
+if (actors.length === 0) {
+    return ui.notifications.warn("Nenhum personagem de jogador com atributo Fome foi encontrado.");
+}
+
+const corFundo = "#fbf6ee";
+const corVermelho = "#7a1118";
+const corBox = "#111";
+
+let checkboxHTML = actors.map(a => 
+    `<label style="display: flex; align-items: center; margin-bottom: 5px; font-family: sans-serif;">
+        <input type="checkbox" name="actor-${a.id}" checked style="margin-right: 8px;"> 
+        ${a.name}
+    </label>`
+).join("");
+
+new Dialog({
+    title: "V5 Transmissão: Gerar Plaquetas",
+    content: `
+        <div style="margin-bottom: 10px; font-family: sans-serif;">Selecione os personagens:</div>
+        <form style="margin-bottom: 15px;">${checkboxHTML}</form>
+    `,
+    buttons: {
+        ok: {
+            label: "Gerar Plaquetas",
+            callback: (html) => {
+                let selectedIds = [];
+                html.find('input[type="checkbox"]:checked').each(function() {
+                    selectedIds.push($(this).attr('name').split('-')[1]);
+                });
+                gerarCards(selectedIds);
+            }
+        }
+    }
+}).render(true);
+
+function renderHungerBoxes(hunger) {
+    let boxes = "";
+    for(let i = 0; i < 5; i++) {
+        let bg = i < hunger ? corBox : "transparent"; 
+        boxes += `<div style="width: 16px; height: 16px; background-color: ${bg}; border: 2px solid ${corBox}; box-sizing: border-box; display: inline-block;"></div>`;
+    }
+    return boxes;
+}
+
+function gerarCards(actorIds) {
+    let offset = 0;
+    let posicoesSalvas = game.user.getFlag("world", "posicoesFomeV5") || {};
+
+    for (let id of actorIds) {
+        let ator = game.actors.get(id);
+        if (!ator) continue;
+        
+        let existing = document.getElementById(`fome-card-${ator.id}`);
+        if (existing) existing.remove();
+
+        let clanItem = ator.items.find(i => i.type === "clan");
+        let clanImgHTML = clanItem && clanItem.img && clanItem.img !== "icons/svg/item-bag.svg" 
+            ? `<img src="${clanItem.img}" style="width: 40px; height: 40px; object-fit: contain; filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.3)); pointer-events: none;">` 
+            : ``;
+
+        let divWrapper = document.createElement("div");
+        divWrapper.id = `fome-card-${ator.id}`;
+        divWrapper.className = "v5-fome-draggable";
+        
+        let topInicial = posicoesSalvas[id]?.top ? posicoesSalvas[id].top + "px" : (100 + offset) + "px";
+        let leftInicial = posicoesSalvas[id]?.left ? posicoesSalvas[id].left + "px" : (100 + offset) + "px";
+
+        divWrapper.style.cssText = `
+            position: fixed; 
+            top: ${topInicial}; 
+            left: ${leftInicial}; 
+            z-index: 1000; 
+            width: 250px;
+            height: 65px;
+            background-color: ${corFundo};
+            filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.5)); 
+            cursor: move;
+            padding: 3px;
+            box-sizing: border-box;
+        `;
+
+        divWrapper.innerHTML = `
+            <div style="background: ${corVermelho}; height: 100%; width: 100%; clip-path: polygon(8px 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%, 0 8px); padding: 1px; box-sizing: border-box; pointer-events: none;">
+                <div style="background: ${corFundo}; height: 100%; width: 100%; clip-path: polygon(7px 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%, 0 7px); padding: 2px; box-sizing: border-box;">
+                    <div style="background: ${corVermelho}; height: 100%; width: 100%; clip-path: polygon(6px 0, 100% 0, 100% calc(100% - 6px), calc(100% - 6px) 100%, 0 100%, 0 6px); padding: 1px; box-sizing: border-box;">
+                        <div style="background: ${corFundo}; height: 100%; width: 100%; clip-path: polygon(5px 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 0 100%, 0 5px); display: flex; align-items: center; justify-content: center; padding: 0 15px; box-sizing: border-box; position: relative; pointer-events: auto;">
+                            
+                            <div style="position: absolute; top: 1px; right: 5px; cursor: pointer; color: ${corVermelho}; font-weight: bold; font-family: sans-serif; font-size: 14px; z-index: 10;" onclick="this.closest('.v5-fome-draggable').remove()">×</div>
+
+                            <div style="display: flex; align-items: center; justify-content: center; width: 100%; gap: 12px; pointer-events: none;">
+                                ${clanImgHTML}
+                                <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden;">
+                                    <div style="color: ${corVermelho}; font-family: 'Arial', sans-serif; font-weight: bold; font-size: 16px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-bottom: 2px;">
+                                        ${ator.name}
+                                    </div>
+                                    <div style="display: flex; align-items: center; gap: 6px;">
+                                        <span style="color: ${corVermelho}; font-family: 'Arial', sans-serif; font-weight: 900; font-size: 14px; text-transform: capitalize; letter-spacing: 0.5px;">Fome</span>
+                                        <div id="boxes-${ator.id}" style="display: flex; gap: 3px;">
+                                            ${renderHungerBoxes(ator.system.hunger?.value || 0)}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+        
+        document.body.appendChild(divWrapper);
+        tornarArrastavel(divWrapper, ator.id);
+        offset += 80; 
+    }
+}
+
+function tornarArrastavel(elmnt, actorId) {
+    let pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.onmousedown = dragMouseDown;
+
+    function dragMouseDown(e) {
+        if (e.target.innerText === "×") return; 
+        e.preventDefault();
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+        e.preventDefault();
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    async function closeDragElement() {
+        document.onmouseup = null;
+        document.onmousemove = null;
+        
+        let posicoesAtuais = game.user.getFlag("world", "posicoesFomeV5") || {};
+        posicoesAtuais[actorId] = {
+            top: elmnt.offsetTop,
+            left: elmnt.offsetLeft
+        };
+        await game.user.setFlag("world", "posicoesFomeV5", posicoesAtuais);
+    }
+}
+
+if (!window.hookFomeCardAtivo) {
+    Hooks.on("updateActor", (actor, updates) => {
+        if (updates.system?.hunger !== undefined) {
+            let boxContainer = document.getElementById(`boxes-${actor.id}`);
+            if (boxContainer) {
+                boxContainer.innerHTML = renderHungerBoxes(updates.system.hunger.value);
+            }
+        }
+    });
+    window.hookFomeCardAtivo = true;
+}
