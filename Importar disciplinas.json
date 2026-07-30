@@ -1,0 +1,3181 @@
+// 1. Cole o código inteiro do Lote após o sinal de igual:
+const lote = [
+  {
+    "name": "Atavismo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Animalism_symbol.png",
+    "system": {
+      "description": "<p>O usuário projeta sua Besta em um animal, aflorando seus mais básicos e primais instintos. Cães de guarda leais tornam-se subitamente vorazes e puros-sangues derrubam seus cavaleiros enquanto fogem no mais puro terror.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Autocontrole + Animalismo</p><p>■ Sistema: É preciso que o alvo seja capaz de ver, ouvir ou cheirar o usuário para que o poder seja ativado. A Dificuldade do teste varia de acordo com o tipo de animal, seu treinamento e se é ou não um carniçal. Uma Vitória permite escolher entre duas respostas primais: atacar ou fugir. “Atacar” faz o animal avançar contra o alvo mais próximo, enquanto “fugir” faz com que ele tente escapar dos arredores a qualquer custo. Animais bem treinados e leais tendem a se livrar dos efeitos desse poder mais rapidamente.</p><p>■ Duração: Um turno para cada sucesso na margem. Uma cena, em caso de Vitória Crítica.</p>",
+      "bonuses": [],
+      "discipline": "animalism",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Winter’s Teeth #3",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Atavism"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Cheiro da Presa",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Animalism_symbol.png",
+    "system": {
+      "description": "<p>O medo entorpecente de alguém que reconhece seu papel de presa tem um aroma único e pode ser reconhecido. Com esse poder, o vampiro é capaz de perceber a presença de qualquer mortal que esteja com esse sentimento na área, podendo rastrear e silenciar qualquer um que ameace sua presença clandestina.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Raciocínio + Animalismo</p><p>■ Sistema: O usuário cheira o ar e faz a rolagem. Cada sucesso permite localizar a posição de um mortal que tenha presenciado o que a Camarilla chama de “brecha na Máscara”. Depois de perceber o alvo, é possível rastreá-lo até o fim da cena (ou da noite, com uma Vitória Crítica). Esse poder é ineficaz contra mortais que sejam suficientemente familiares à existência de vampiros, já que isso elimina a nota de medo do seu cheiro.</p><p>■ Duração: Uma cena ou uma noite</p>",
+      "bonuses": [],
+      "discipline": "animalism",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "47"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Sense the Prey"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Obeah",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Auspex_symbol.png",
+    "system": {
+      "description": "<p>O vampiro acalma um alvo emocionalmente agitado, restaurando-lhe um mínimo de equilíbrio. Isso é especialmente efetivo quando usado em mortais, seja para ajudá-los em um momento de agitação ou acalmá-los antes de serem servidos como alimento.</p><p>■ Amálgama: Fortitude 1</p><p>■ Custo: Uma Checagem de Sangue (Dano Superficial na Força de Vontade)</p><p>■ Paradas de Dados: Autocontrole + Auspícios</p><p>■ Sistema: O vampiro faz a rolagem (Dif. 2) e restaura uma quantidade de níveis de Dano Superficial à Força de Vontade igual à margem da Vitória. Como alternativa, o usuário restaura um nível de Dano Agravado à Força de Vontade para cada 3 sucessos na margem. Caso Obeah seja usada com sucesso em um mortal, ela o acalma se ele estiver em um estado emocional turbulento, ou, em todo caso, o deixa à vontade. O uso deste poder leva todo um turno. Se em vez disso o vampiro usar toda uma cena, reduza a Dificuldade para zero. Obeah deve ser usada em um alvo que não seja o próprio vampiro. Um alvo só pode ser afetado por este poder uma vez por noite. Quando o usuário acalma mais de um alvo por noite, ele sofre uma quantidade de Dano Superficial à Força de Vontade igual à metade do número de sucessos na margem para cada alvo adicional.</p><p>■ Duração: Não aplicável</p>",
+      "bonuses": [],
+      "discipline": "auspex",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "24"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Obeah"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Busca Infalível",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Auspex_symbol.png",
+    "system": {
+      "description": "<p>Após contato visual, o vampiro cria um laço sobrenatural com seu alvo. Por várias noites, o vampiro é capaz de receber vislumbres de seu alvo e seus arredores quando este se vê em uma superfície reflexiva. O alvo não tem consciência do espião, tendo apenas a estranha sensação se estar sendo observado.</p><p>■ Amálgama: Dominação 1</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Autocontrole + Auspícios</p><p>■ Sistema: O usuário precisa fazer contato visual com seu alvo ao menos por um segundo, fazendo a rolagem. Uma Vitória faz com que o efeito dure uma noite, mais uma para cada sucesso adicional (contra um vampiro, a Dificuldade base é 3). Enquanto Busca Infalível estiver ativa, o usuário pode se concentrar por um turno para contemplar a visão do último reflexo do alvo (quer ele tenha se visto conscientemente ou não). É importante notar que poderes de Ofuscação não protegem desse poder, pois ele utiliza a percepção do próprio alvo. O usuário pode tentar identificar os arredores com um teste de Inteligência + Manha/Sobrevivência (a Dificuldade varia de acordo com as circunstâncias do local refletido). O alvo pode ter um vislumbre do espião com um teste de Raciocínio + Percepção (Dif. 4); uma Vitória Crítica revela o rosto do vampiro.</p><p>■ Duração: Uma noite, mais uma para cada sucesso na margem</p>",
+      "bonuses": [],
+      "discipline": "auspex",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "46-47"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Unerring Pursuit"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Os Olhos das Bestas",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Auspex_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode compartilhar os sentidos de um grupo de animais para ver e ouvir o mesmo que eles.</p><p>■ Amálgama: Animalismo 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Inteligência + Empatia com Animais</p><p>■ Sistema: O vampiro pode acessar os sentidos de um grupo de animais (como ratos e baratas), pulando de um indivíduo do grupo para o outro, conforme lhe convém.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "auspex",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Fall of London",
+        "page": "148"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Eyes of the Beasts"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Aliviando a Alma Bestial",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Auspex_symbol.png",
+    "system": {
+      "description": "<p>Como buscadores das promessas da Golconda, alguns vampiros exploram modos de remediar as turbulentas almas de outros Amaldiçoados. Este poder compartilha uma porção da serenidade moral do vampiro com um Membro arrependido, permitindo que uma parte do remorso seja abrandada enquanto a Besta é mantida sob controle. Ele requer que seu usuário compartilhe o estado de mente e espírito do alvo, e afeta tanto a vontade de um quanto de outro. (Frequentemente usado por Salubri, este poder sem dúvida contribuiu para a sua reputação como monstruosos ladrões de almas...)</p><p>■ Amálgama: Dominação 3</p><p>■ Pré-requisito: Obeah</p><p>■ Custo: Duas Checagens de Sangue e uma Mácula</p><p>■ Paradas de Dados: Autocontrole + Auspícios vs. Humanidade</p><p>■ Sistema: O vampiro passa uma cena isolado com o alvo e faz a rolagem. Para cada sucesso na margem, o vampiro pode remover uma Mácula do alvo, ou erguer um “escudo” psicológico que protegerá o alvo de Máculas futuras na base de um para um. Em uma Vitória Crítica, o usuário pode renunciar aos benefícios descritos acima e restaurar um único ponto de Humanidade do alvo, porém, nenhum vampiro pode ganhar este benefício mais do que uma vez. Aliviando a Alma Bestial só funciona em vampiros, e apenas em alvos cuja Humanidade esteja menor do que a do usuário. Independentemente dos benefícios recebidos, o alvo fica entorpecido pelo restante da sessão, tendo parte de sua mente fundida com a do usuário, e todos os poderes de Dominação usados nele pelo usuário são automaticamente bem-sucedidos sem a necessidade de contato visual.</p><p>■ Duração: Uma sessão</p>",
+      "bonuses": [],
+      "discipline": "auspex",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "24-25"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Unburdening the Bestial Soul"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Paixão",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Dominate_symbol.png",
+    "system": {
+      "description": "<p>O usuário desperta as emoções de sua vítima, seja aumentando-as até um estado frenético ou embotando-as até que o alvo fique completamente insensível. O vampiro não pode escolher que emoção será afetada, ele só pode amplificar ou entorpecer emoções que já estejam presentes no alvo. Desta forma, o usuário pode inflamar uma leve irritação até que se torne um ataque de fúria ou atrofiar o amor verdadeiro até que se torne mero interesse casual.</p><p>■ Custo: Gratuito</p><p>■ Paradas de Dados: Manipulação + Dominação vs. Inteligência + Determinação</p><p>■ Sistema: Após iniciar uma conversa com o alvo, o usuário pode fazer a rolagem resistida. Uma Vitória permite que o usuário amplie ou entorpeça algum sentimento presente no alvo até o fim da cena. Uma Vitória Crítica estende a duração de Paixão até o fim da noite. Efeitos deste poder podem incluir acréscimos ou subtrações de 1 ponto na Dificuldade de rolagens específicas.</p><p>■ Duração: Uma cena ou uma noite</p>",
+      "bonuses": [],
+      "discipline": "dominate",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Vampiro: a Máscara (V20)",
+        "page": "148"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Passion"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Devoção Servil",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Dominate_symbol.png",
+    "system": {
+      "description": "<p>O vampiro é capaz de dificultar a interferência de outros Membros sobre alguém que esteja sob a influência de sua Dominação.</p><p>■ Amálgama: Presença 1</p><p>■ Custo: Gratuito</p><p>■ Sistema: Qualquer tentativa de coagir um alvo que esteja sob a influência de Dominação do vampiro tem sua Dificuldade aumentada em +2 (a Dificuldade não pode ultrapassar 7), ou sofre uma penalidade de –4 dados em testes resistidos.</p><p>■ Duração: Passiva</p>",
+      "bonuses": [],
+      "discipline": "dominate",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "104"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Slavish Devotion"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Favor do Domitor",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Dominate_symbol.png",
+    "system": {
+      "description": "<p>Os Membros são criaturas de ironia cruel, e o nome deste poder de Disciplina serve de exemplo. Enquanto condicionado por Favor do Domitor, um servo ligado a um vampiro por um Laço de Sangue descobre ser muito mais difícil agir contra seu mestre. Tzimisce dominadores gostam muito deste poder e o usam para assegurar a lealdade dos seus servos.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: Rolagens de Desafio para servos teimosos sob os efeitos de Favor do Domitor são feitas com uma penalidade de –3 dados, sendo proibido que enlaçados usem Força de Vontade nessas rolagens. Além disso, uma Vitória Crítica em uma rolagem de desafio significa que o Laço de Sangue não enfraquecerá naquele mês.</p><p>■ Duração: Um mês</p>",
+      "bonuses": [],
+      "discipline": "dominate",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "25"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Domitor's Favor"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Domínio Ancestral",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Dominate_symbol.png",
+    "system": {
+      "description": "<p>Vampiros de grande idade e potência são capazes de impor sua vontade através do Sangue, sem a tradicional necessidade do contato visual e comunicação com seu alvo. Este poder permite que um Membro dê comandos a um descendente, mesmo que isso vá contra sua vontade. Vampiros instintivamente têm conhecimento quando são manipulados desse modo.</p><p>■ Amálgama: Feitiçaria de Sangue 3</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Manipulação + Dominação vs. Inteligência + Determinação</p><p>■ Sistema: Em uma Vitória, o alvo se vê obrigado a cumprir a ordem (desde que isso não envolva se ferir). Para cada Geração de distância depois da primeira, o alvo recebe +1 dado para resistir ao poder. Caso o número de dados para resistir ao poder exceda 10, o teste é considerada uma Falha automática. Uma Vitória Crítica torna o alvo imune a este poder até o fim do capítulo.</p><p>■ Duração: Uma cena ou até o comando ser executado</p>",
+      "bonuses": [],
+      "discipline": "dominate",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "104"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Ancestral Dominion"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Tabula Rasa",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Dominate_symbol.png",
+    "system": {
+      "description": "<p>Esse poder permite que o vampiro erradique todo traço de memória de um alvo, tornando-o uma representação flexível de si mesmo. Embora retenha a maior parte de suas habilidades, a vítima se esquece de todo o resto – experiências, amigos, família, desejos e ambições (na maioria dos casos, permanentemente). O uso desse poder é raríssimo fora do Sabá, pois até o mais cruel dos Membros a considera excessiva.</p><p>■ Custo: Duas Checagens de Sangue e uma Mácula (ou mais)</p><p>■ Paradas de Dados: Determinação + Dominação vs. Autocontrole + Determinação</p><p>■ Sistema: O vampiro mantém contato visual com o alvo e faz rolagens contínuas, devendo acumular 10 sucessos na cena. O processo não deve ser interrompido, então a vítima precisa estar contida. Caso a concentração do vampiro seja perturbada ou o alvo consiga uma Vitória Crítica, é preciso reiniciar todo o processo (incluindo a Checagem de Sangue). Uma vez que o processo esteja completo, elimina-se as Convicções, Pilares, Ambições, além das Vantagens que envolvam algum nível de lembrança para acessá-las (isso fica a cargo do narrador). Atributos, Habilidades e Disciplinas permanecem. A memória é perdida permanentemente, embora já tenha havido casos em que a vítima recobrou parte de suas lembranças ao se deparar com um evento traumático com seu antigo pilar. O alvo é altamente suscetível a qualquer mentira contada logo após sua submissão a este poder. O uso de Tabula Rasa é extremamente cruel, causando Máculas.</p><p>■ Duração: Permanente</p>",
+      "bonuses": [],
+      "discipline": "dominate",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "47"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Tabula Rasa"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Obstinação",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Fortitude_symbol.png",
+    "system": {
+      "description": "<p>Apesar da Fortitude permitir que o vampiro resista ao dano, ela faz muito pouco contra forças que o faça cambalear ou ser lançado. Combinando sua resistência com Potência, o vampiro é capaz de manter uma posição fixa mesmo ao ser atingido por um choque massivo.</p><p>■ Amálgama: Potência 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Vigor + Sobrevivência ou Raciocínio + Sobrevivência</p><p>■ Sistema: Quando ativado, o vampiro pode usar este poder para se tornar um resistente e forte objeto imóvel. Vampiros caindo de grandes alturas são capazes de literalmente acertar o chão correndo. Vampiros atingidos por veículos em movimento não se movem um centímetro enquanto o carro é amassado como se fosse alumínio. O usuário pode ativar este poder de forma antecipada ou instintivamente quando necessário. Qualquer dano recebido na queda ou colisão é reduzido de acordo com o valor de Fortitude do usuário. Isso ocorre antes do dano ser diminuído pela metade, e não pode reduzi-lo a menos de 1.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "fortitude",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Winter’s Teeth #3",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Obstinacy"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Valeren",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Fortitude_symbol.png",
+    "system": {
+      "description": "<p>O vampiro projeta sua Fortitude para fora, ordenando que o poder do seu Sangue repare o corpo ferido de outro vampiro.</p><p>■ Amálgama: Auspícios 1</p><p>■ Custo: Uma Checagem de Sangue (e Dano Superficial à Vitalidade)</p><p>■ Paradas de Dados: Inteligência + Fortitude</p><p>■ Sistema: O vampiro faz a rolagem (Dif. 2) e cura uma quantidade de níveis de Dano Superficial igual à margem de sucessos. Como alternativa, o usuário cura 1 nível de Dano Agravado para cada 3 sucessos na margem. O uso deste poder leva todo um turno. Se, em vez disso, o vampiro usar toda uma cena, reduza a Dificuldade para zero. Valeren deve ser usada em um alvo que não seja o vampiro que o invoca, e só afeta vampiros. Um alvo só pode ser afetado por este poder uma vez por noite. Quando o usuário cura mais do que um alvo por noite, ele sofre uma quantidade de Dano Superficial igual à metade do número de sucessos na margem para cada alvo adicional.</p><p>■ Duração: Não aplicável</p>",
+      "bonuses": [],
+      "discipline": "fortitude",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "25"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Valeren"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Selar a Mandíbula da Besta",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Fortitude_symbol.png",
+    "system": {
+      "description": "<p>Através de rigoroso treino e disciplina, o vampiro é capaz de evitar o chamado da Fome por um curto período. Concentrando-se em matar seu desejo, o vampiro força a Besta a suavizar, podendo ignorar suas demandas. Fazer isso, entretanto, é uma aposta arriscada, pois a tentativa pode aumentar a Fome do vampiro.</p><p>■ Custo: Duas Checagens de Sangue</p><p>■ Sistema: A qualquer momento, o vampiro faz duas Checagens de Sangue e, caso sua Fome não aumente, pode ignorar qualquer efeito dela pelo restante da cena. Fazer isso reduz os dados em todas as rolagens em metade da Fome atual (arredondando para cima). Se a Fome aumentar por algum outro meio durante esse período, reduz-se um dado adicional. Se o número de dados for reduzido a zero, é preciso fazer uma rolagem para resistir a um Frenesi de Fúria, já que sufocar a Fome intensifica a fúria da Besta.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "fortitude",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Forbidden Religions",
+        "page": "44"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Seal the Beast's Maw"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Estilhaçar",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Fortitude_symbol.png",
+    "system": {
+      "description": "<p>Quando um punho atingo o concreto, geralmente é o punho que quebra. Acontece do mesmo modo com este poder, no qual o vampiro vira um golpe contra o próprio atacante. Este poder é conhecido por quebrar armas e estilhaçar ossos.</p><p>■ Pré-requisito: Tenacidade</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Vigor + Fortitude vs. Vigor (+ Fortitude)</p><p>■ Sistema: Qualquer um que obtenha Falha Total em fazer um ataque de Briga contra o usuário sofre o dano absorvido pela Tenacidade como Dano Superficial. Armas brancas também recebem o dano refletido, quebrando ao atingir seu valor de modificador de dano (a não ser que seja uma arma sagrada, mágica ou inquebrável). Este poder só pode ser usado enquanto Tenacidade estiver ativo e pode ser usado em resposta a um ataque desde que o usuário ainda possa ativar Fortitude durante o turno atual.</p><p>■ Duração: Uma cena (ou até atingido)</p>",
+      "bonuses": [],
+      "discipline": "fortitude",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "104-105"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Shatter"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Quimerismo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Obfuscate_symbol.png",
+    "system": {
+      "description": "<p>O vampiro é capaz de criar breves, porém vívidas alucinações, distraindo e atraindo a atenção daqueles afetados. Uma alucinação pode afetar apenas um dos cinco sentidos – ela pode ser visual, auditiva, tátil, etc. –, ocorrendo por tempo suficiente para causar uma impressão antes de ser encerrada. O usuário decide os detalhes da alucinação, embora, devido à sua natureza breve, ela não deva passar de um vislumbre ou de uma voz entreouvida (ela não pode ser usada para criar um documento de identidade falso, por exemplo).</p><p>■ Amálgama: Presença 1</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Manipulação + Ofuscação vs. Autocontrole + Raciocínio</p><p>■ Sistema: Após a rolagem, qualquer indivíduo despreparado, à vista do vampiro e elegível a experimentar a alucinação (por ter a imagem projetada em sua linha de visão ou ser o alvo de uma sensação tátil) fica distraído, perdendo 2 dados da sua próxima ação. Além disso, aqueles que falham em resistir perdem sua próxima ação ativa. (No entanto, ainda podem se defender e resistir normalmente com uma penalidade de –2 dados.) Outros efeitos resultantes da alucinação ficam à critério do narrador, que deve ser cauteloso. Essas alucinações jamais podem ser gravadas ou transmitidas (como é possível com o uso de Fantasma na Máquina).</p><p>■ Duração: Um turno</p>",
+      "bonuses": [],
+      "discipline": "obfuscate",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "25-26"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Chimerstry"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Ventriloquismo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Obfuscate_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode lançar sua voz de modo que apenas o destinatário pretendido a ouça.</p><p>■ Amálgama: Auspícios 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Raciocínio + Ofuscação</p><p>■ Sistema: O poder de Ventriloquismo pode ser usado em qualquer alvo no campo de visão do vampiro. Caso este deseje resistir ao recebimento da mensagem, o teste se torna resistido, rolando-se contra a Autocontrole + Determinação do alvo.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "obfuscate",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Fall of London",
+        "page": "148"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Ventriloquism"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Passagem Fantasma",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Obfuscate_symbol.png",
+    "system": {
+      "description": "<p>O Vampiro pode doar uma porção de sua sutileza aos animais sob seu controle, mascarando seus passos dos métodos mundanos de rastreio.</p><p>■ Amálgama: Animalismo 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: Animais sob a influência do vampiro com este poder não deixam nenhum rastro que possa ser percebido por meios mundanos. Entretanto, Sentir o Invisível pode discernir os rastros da criatura, seguindo a regra geral de Ofuscação.</p><p>■ Duração: Uma noite</p>",
+      "bonuses": [],
+      "discipline": "obfuscate",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Forbidden Religions",
+        "page": "18-19"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Ghost's Passing"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Labirinto Mental",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Obfuscate_symbol.png",
+    "system": {
+      "description": "<p>Serpentes afirmam que Ofuscação é menos sobre ilusão e mais sobre percepção. Labirinto Mental é a habilidade de remover todo o senso de direção e localização da vítima, permitindo que o vampiro a torne prisioneira em sua atual localização. A vítima encontra sua localidade dobrando-se sobre si mesma, subtamente alterando sua percepção de salas previamente visitadas, convencendo-a de que a saída apenas a levará para mais fundo do labirinto, eventualmente quebrando-a em um estado de pânico e fragilidade.</p><p>■ Amálgama: Dominação 1</p><p>■ Custo: Uma ou mais Checagens de Sangue</p><p>■ Paradas de Dados: Carisma + Ofuscação vs. Raciocínio + Autocontrole</p><p>■ Sistema: O vampiro pessoalmente diz “você não pode escapar” ao alvo e faz a rolagem resistida. Em caso de Vitória, a vítima sofre para encontrar a saída da construção em que está. Duas Checagens de Sangue adicionais permitem que este poder seja utilizado em uma única sala ou em uma área externa preenchida (como uma zona de construção ou floresta). Mortais são incapazes de escapar, mas criaturas sobrenaturais podem fazer um teste de Determinação + Percepção (Dif. igual ao número de sucessos do usuário na rolagem inicial). Caso a vítima falhe, sofre 1 ponto de Dano Superficial à Força de Vontade por sucesso não alcançado. Essa rolagem não recebe bônus de trabalho em equipe. Labirinto Mental se encerra caso o ambiente se torne perigoso (como pegar fogo, por exemplo), exceto se o usuário possuir Decreto Terminal.</p><p>■ Duração: Uma noite</p>",
+      "bonuses": [],
+      "discipline": "obfuscate",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "85"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Mental Maze"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Fata Morgana",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Obfuscate_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode criar alucinações elaboradas, fazendo com que quaisquer alvos vejam, ouçam e sintam o que ele quiser. Fata Morgana faz com que seus alvos experimentem eventos que simplesmente não são reais. Não há limite para o número de vítimas que pode ser afetado simultaneamente, contudo, para ser afetado pelo poder, um alvo precisa ser capaz de ver o usuário ou vice-versa. O vampiro não precisa permanecer no local uma vez que a vítima tenha sido afetada. Efeitos visuais não podem ser usados para encobrir itens ou indivíduos, e jamais são capazes de bloquear por completo uma linha de visão. Efeitos sensoriais criados por Fata Morgana não são capazes de cegar, ensurdecer ou de nenhum modo sobrecarregar os sentidos. Além disso, alucinações não são captadas por câmeras ou outros tipos de aparelhos de gravação.</p><p>■ Amálgama: Presença 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Manipulação + Ofuscação</p><p>■ Sistema: O usuário faz a rolagem (Dif. 1 + número de sentidos afetados). As alucinações visuais mais fáceis de criar são razoavelmente pequenas ou discretas – aumente a Dificuldade em +1 para alucinações com o tamanho de um cômodo, +2 para aquelas com o tamanho de uma casa e assim por diante. Qualquer tentativa de imitar a aparência de um indivíduo específico ou, de algum modo, enganar, pode exigir testes adicionais de Performance ou Subterfúgio, conforme o caso. Vampiros têm uma chance de desacreditar uma alucinação, contudo, mortais só podem fazê-lo se tiverem uma razão para suspeitar da farsa. Uma Vitória significa que o alvo não é mais afetado pela alucinação, que desaparece para ele. Note que o uso do poder não é evidente, logo, mesmo que a alucinação seja revelada, não fica óbvio quem a originou.</p><p>■ Duração: Uma cena ou até desativar</p>",
+      "bonuses": [],
+      "discipline": "obfuscate",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "26"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Fata Morgana"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Máscara do Isolamento",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Obfuscate_symbol.png",
+    "system": {
+      "description": "<p>Sutil mas efetivo, esse poder permite forçar a Máscara de Mil Faces em um alvo desavisado. A vítima não é mais vista como ela é, nem mesmo pelos mais próximos a ela. Frequentemente empregado por um longo período de tempo, esse poder é utilizado para quando se quer quebrar parcialmente uma vítima, cortando-a de seu meio e da sociedade de modo que não há nada que possa ser feito para escapar de tal destino.</p><p>■ Amálgama: Dominação 1</p><p>■ Pré-requisito: Máscara de Mil Faces</p><p>■ Custo: Uma Checagem de Sangue (Máculas+)</p><p>■ Paradas de Dados: Manipulação + Ofuscação vs. Carisma + Sagacidade</p><p>■ Sistema: O vampiro mantém contato visual com o alvo e faz a rolagem resistida. O efeito dura por uma quantidade de noites igual à margem da Vitória. Enquanto estiver sob efeito do poder, é considerado como se o alvo estivesse utilizando a Máscara de Mil Faces (é possível tentar persuadir sua família e amigos de sua identidade com um teste de Autocontrole + Persuasão, embora, mesmo com provas, isso se mostre uma tarefa complicada). Caso o alvo compreenda o poder que está sendo usado nele, o efeito se encerra e não pode ser empregado novamente, pois ele depende da ignorância da vítima para se manter ativo. Dessa forma, o vampiro precisa manter suas intenções mascaradas para utilizar esse poder repetidamente em um mesmo alvo. Dependendo da situação, esse poder pode gerar Máculas no usuário.</p><p>■ Duração: Uma noite, mais uma para cada sucesso na margem</p>",
+      "bonuses": [],
+      "discipline": "obfuscate",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "48"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Mask of Isolation"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Olhos da Serpente",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Presence_symbol.png",
+    "system": {
+      "description": "<p>Os olhos do vampiro se tornam fendidos como os de uma serpente e são capazes de paralisar um mortal que os encare. O usuário pode até mesmo paralizar outros vampiros com esse poder, mas o efeito é de curta duração e passivo de incitar a ira do alvo.</p><p>■ Amálgama: Proteanismo 1</p><p>■ Custo: Gratuito</p><p>■ Paradas de Dados: Carisma + Presença vs. Raciocínio + Autocontrole</p><p>■ Sistema: Ao prender o olhar de um mortal, o vampiro pode imobilizá-lo por quanto tempo manter o contato visual. O poder afeta apenas um alvo por vez e é interrompido caso o alvo sofra qualquer tipo de dano. Ainda é possível falar, mas não gritar. Para utilizar esse poder em um vampiro, é preciso passar em um teste resistido. Um vampiro capturado por esse poder pode escapar a partir do turno seguinte, gastando 1 ponto de Força de Vontade.</p><p>■ Duração: Até o contato visual ser quebrado</p>",
+      "bonuses": [],
+      "discipline": "presence",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Anarch",
+        "page": "185"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Eyes of the Serpent"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Face do Amor Verdadeiro",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Presence_symbol.png",
+    "system": {
+      "description": "<p>Utilizando um potente coquetel de emoção e ilusão concentradas, o vampiro pode alterar a Ressonância do sangue de um mortal e até arriscar a conecção de um vampiro com sua Humanidade. A vítima (e apenas ela) percebe o vampiro como um mortal que tenha fortes laços emocionais (como ódio por um rival, paixão por um novo amante, ou os sentimentos complicados que um vampiro tem por seu Pilar).</p><p>■ Amálgama: Ofuscação 3</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Manipulação + Presença vs. Autocontrole + Raciocínio</p><p>■ Sistema: Para personificar uma pessoa pela qual a vítima tenha fortes emoções, o vampiro precisa conhecer sua aparência e o que a vítima sente por ela. Quando o poder é ativado, o narrador faz a rolagem resistida secreta. Falha significa que a visão não carrega qualquer carga emocional, o que azeda qualquer interação social com a vítima. Isso também previne que a vítima seja afetada por este poder pelo resto da história. Em uma Vitória, o vampiro adiciona seu valor de Presença em todas as rolagens para afetar a Ressonância de um mortal ou o estado emocional de um vampiro. Aparecer como o Pilar de um vampiro é um jogo perigoso, especialmente se o alvo possuir Sentir o Invisível, mas, se bem utilizado, este poder pode levar a vítima a receber Máculas ao se deparar com seu Pilar com comportamento e ideiais modificados, ferido ou até mesmo aparentemente morto.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "presence",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "85"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "True Love's Face"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Limpar o Campo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Presence_symbol.png",
+    "system": {
+      "description": "<p>O vampiro é capaz de limpar um local de todos os indivíduos ali presentes.</p><p>■ Amálgama: Dominação 3</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Autocontrole + Presença</p><p>■ Sistema: Uma Vitória faz com que todos os indivíduos presentes no mesmo ambiente que o usuário deixem aquele espaço, de maneira calma e ordenada. O vampiro pode selecionar um número de alvos igual ao seu Autocontrole para serem isentos desse efeito. O teste possui Dificuldade 3 contra mortais e carniçais; contra vampiros, o teste é resistido contra Autocontrole + Raciocínio.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "presence",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Fall of London",
+        "page": "177"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Clear the Field"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Magnum Opus",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Presence_symbol.png",
+    "system": {
+      "description": "<p>O vampiro é capaz de imbuir sua Presença em suas obras de arte, tornando-as tão belas que quem as vê é tomado pela mais absoluta admiração. Esse sentimento, entretanto, é meramente uma ilusão e não resiste a um exame minucioso.</p><p>■ Amálgama: Auspícios 3</p><p>■ Custo: Uma ou mais Checagens de Sangue</p><p>■ Paradas de Dados: Carisma/Manipulação + Ofícios</p><p>■ Sistema: O teste é feito antes de criar a obra de arte. A Dificuldade do projeto deve ser 10 ou mais. Uma Vitória faz com que traços da Presença permaneçam na obra. Quem é exposto a ela precisa fazer um teste de Autocontrole + Determinação (Dif. igual ao nível de Presença do usuário) para não cair em um estado semelhante ao Fascínio ou Transe. Uma Vitória no teste de resistência torna o alvo imune à influência da arte. É importante notar que, depois de sair da presença da obra, críticos especialistas e observadores minuciosos podem se encontrar subitamente capazes de apontar suas falhas e imperfeições.</p><p>■ Duração: Não aplicável</p>",
+      "bonuses": [],
+      "discipline": "presence",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Winter’s Teeth #3",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Magnum Opus"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Vicissitude",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Protean_symbol.png",
+    "system": {
+      "description": "<p>Este poder, raro fora do Clã Tzimisce, permite que o vampiro exija que sua própria carne o obedeça. Pele, músculos e até ossos podem ser esculpidos ou deformados, o resultado às vezes sendo perturbadoramente belo, porém, com a mesma frequência, monstruoso. Usuários habilidosos são capazes de criar características bizarras ou reformar seus corpos inteiros, embora transformações maiores cobrem um alto preço do seu físico. Membros que usam Vicissitude criam de tudo, de úteis ferramentas corporais a ornamentos expressivos.</p><p>■ Amálgama: Dominação 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Determinação + Proteanismo</p><p>■ Sistema: Cada sucesso permite que o usuário faça uma alteração em si mesmo, embora o total de alterações não possa exceder seu valor de Proteanismo, independentemente do número de aplicações ou sucessos. Cada alteração faz com que o usuário perca –1 ponto em um único Atributo Físico, já que a massa corporal deve vir de algum lugar. (Nenhum Atributo pode ser reduzido a menos de 1.) Cada uso do poder leva 1 turno completo para ser realizado.</p><p>Alterações podem ser consertadas ou revertidas como se fossem Dano Agravado, com cada uma equivalendo a um único nível de Dano Agravado (e restaurando pontos de Atributo perdidos de acordo).</p><ul><li><b>Redistribuição:</b> O usuário soma 1 único ponto a qualquer um dos seus Atributos Físicos. Isto não pode resultar em nenhum Atributo com mais do que 5 pontos. Estas alterações são visíveis, porém não ameaçam a Máscara.</li><li><b>Armas (apenas uma vez por alvo):</b> O usuário ganha o equivalente a uma arma perfurante leve ou contundente pesada (Dano Superficial +2) na forma de protuberâncias ósseas ou massas de cartilagem densa.</li><li><b>Armadura:</b> 1 ponto de Atributo pode ser transformado em 2 pontos de valor de armadura, com um limite máximo de 6 pontos. Isso geralmente assume a forma de ossos subdérmicos reforçados ou camadas de gordura e cartilagem.</li><li><b>Aparência:</b> O usuário pode mudar sua aparência. Ocultar a própria identidade (Dif. 3), melhorar Visual (Dif. 4) e imitar uma pessoa específica (Dif. 5). Uma Falha Total não gera resultado, enquanto uma Falha Bestial faz com que a Qualidade Visual seja reduzida. Vampiros do Clã Nosferatu são incapazes de usar esse aspecto para qualquer outra coisa exceto esconder sua identidade.</li></ul><p>■ Duração: Permanente</p>",
+      "bonuses": [],
+      "discipline": "protean",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "26-27"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Vicissitude"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Modelagem de Carne",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Protean_symbol.png",
+    "system": {
+      "description": "<p>Estendendo sua maestria sobre a carne, o vampiro passa a ser capaz de infligir seus “cuidados” aos corpos de terceiros. Este poder é corretamente temido, pois muitos de seus usuários têm uma reputação de torturadores desumanos, embora alguns o empreguem com grande efeito para melhorar e adaptar seus servos e aliados.</p><p>■ Pré-requisito: Vicissitude</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Determinação + Proteanismo vs. Vigor + Determinação</p><p>■ Sistema: Para usar este poder, o usuário deve ser capaz de trabalhar sem distrações no seu alvo, que, portanto, precisa ser voluntário ou estar contido. No primeiro caso, siga o mesmo sistema de Vicissitude. No segundo, o alvo pode resistir em uma rolagem resistida, com a margem do usuário contando como sucessos de Vicissitude. Cada uso deste poder leva toda uma cena para ser completado. Novamente, o número total de alterações não pode ser maior do que o valor de Proteanismo do usuário, independentemente do número de aplicações ou sucessos. Em caso de vários usuários trabalhando em um único alvo, conte apenas o maior valor de Proteanismo. Alterações podem ser consertadas ou revertidas como se fossem Dano Agravado, com cada uma equivalendo a um único nível de Dano Agravado.</p><p>■ Duração: Permanente</p>",
+      "bonuses": [],
+      "discipline": "protean",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "27-28"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Fleshcrafting"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Absorção Visceral",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Protean_symbol.png",
+    "system": {
+      "description": "<p>O vampiro torna seu corpo semi-permeável para que possa absorver o sangue e visceras dos corpos em uma área. Essa é uma forma extremamente eficaz de encobrir os rastros de um massacre.</p><p>■ Amálgama: Feitiçaria de Sangue 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Força + Proteanismo</p><p>■ Sistema: Para que este poder possa ser utilizado, é preciso haver pelo menos um corpo em uma área de cinco metros. Após a rolagem, o vampiro pode absorver o sangue e carne do corpo, consumindo-o por completo e deixando apenas uma pilha de pó. Este poder recupera 1 ponto de Fome por corpo absorvido, mas o total não pode ultrapassar o nível atual de Feitiçaria de Sangue. Gasta-se 1 turno por corpo absorvido e é importante ressaltar que, embora eficaz para se livrar de evidências, o vampiro se torna literalmente um vortex de sangue e vísceras enquanto o poder está em uso.</p><p>■ Duração: Um turno por corpo</p>",
+      "bonuses": [],
+      "discipline": "protean",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "49"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Visceral Absorption"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Forma Hedionda",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Protean_symbol.png",
+    "system": {
+      "description": "<p>Com um domínio do corpo tão completo que chega a ultrapassar as limitações naturais, o vampiro pode assumir uma forma verdadeiramente monstruosa, com garras terríveis, presas salientes, texturas enrugadas e músculos trincados. Embora os traços exatos possam variar de ocasião para ocasião, a forma costuma ter uma aparência individual específica que se manifesta toda vez que este poder é usado, uma visão da Besta do usuário encarnada. Alguns usuários aparentam ser animais infernais malformados, outros são demoníacos e atávicos, e há aqueles que desafiam qualquer noção de familiaridade mundana. Muitos incorporam os traços de vampiros naturais, como sanguessugas, morcegos, carrapatos e mosquitos, ampliados até proporções grotescas.</p><p>■ Pré-requisito: Vicissitude</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: Forma Hedionda leva 1 turno para ser ativada, e durante esse tempo o vampiro só pode se defender. Este poder concede ao vampiro uma quantidade de alterações de Vicissitude livres (sem incorrer na perda de pontos de Atributo) igual ao seu valor de Proteanismo. Essas alterações podem ser gastas em Redistribuição, Armas e Armadura. Narradores generosos também podem considerar outras alterações, tais como membranas semelhantes a asas que permitam ao vampiro planar, membros estendidos para maior alcance ou outros usos criativos. Entretanto, com a Besta tão próxima da superfície, quaisquer Falhas enquanto se usa Forma Hedionda são consideradas Falhas Bestiais, e qualquer teste de Frenesi será feito com um nível de Dificuldade +2. O vampiro também assume uma aparência inconfundivelmente inumana e só consegue se comunicar com grunhidos, chiados e rosnados.</p><p>■ Duração: Uma cena ou até desativar</p>",
+      "bonuses": [],
+      "discipline": "protean",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "28"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Horrid Form"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Coração das Trevas",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Protean_symbol.png",
+    "system": {
+      "description": "<p>Praticado quase que exclusivamente por vampiros no alto escalão da Igreja de Set, este poder permite ao vampiro remover seu próprio coração e guardá-lo fora de seu corpo. A carne e os ossos se abrem conforme o vampiro insere as mãos no próprio peito sem a necessidade de qualquer incisão. Este poder só pode ser usado pelo vampiro em si mesmo. O vampiro normalmente guarda o coração em um jarro ou urna cerimonial, mas não há restrição para onde guardá-lo. Muitos Membros pertencentes a cultos se aproveitam do fato de que o órgão pode reter Vitae, podendo se alimentar a distância, recebendo doações de sangue ritualístico. Enquanto o coração estiver removido, o vampiro fica imune a estacas, a não ser que o coração removido seja estacado. As emoções do vampiro ficam entorpecidas, provendo resiliência contra os clamores da Besta, mas removendo sua compaixão.</p><p>■ Amálgama: Fortitude 2</p><p>■ Custo: Gratuito</p><p>■ Sistema: Este poder inflige 2 de Dano Agravado ao remover o coração. Nenhum poder pode ser utilizado para mitigar esse dano e recolocar o coração exige duas Checagens de Sangue. Uma vez que o coração esteja removido, o vampiro recebe +2 dados para resistir ao Frenesi, mas sofre penalidade de –2 dados em rolagens de Remorso. Caso o coração receba Dano Agravado igual ou maior que a Vitalidade do vampiro, ele cai em Torpor. Se o coração removido for destruído – algo possível apenas com fogo ou luz solar – o vampiro experiencia a morte final. O vampiro só pode ser estacado caso o ataque seja feito ao coração removido. Caso seja oferecido sangue ao coração, isso alimenta o vampiro normalmente (e pode colocá-lo sob um Laço de Sangue). Do mesmo modo, é possível se alimentar do coração (o que permite até mesmo a Diablerie). O vampiro está sujeito à morte por fogo ou luz solar mesmo sem seu coração.</p><p>■ Duração: Permanente</p>",
+      "bonuses": [],
+      "discipline": "protean",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "85-86"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Heart of Darkness"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Um com a Terra",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Protean_symbol.png",
+    "system": {
+      "description": "<p>O Membro domina tanto sua própria forma que passa a ser capaz de estendê-la ao seu domínio. O vampiro não só consegue afundar na terra, como possui uma percepção sobrenatural dos eventos que se passam na região.</p><p>■ Amálgama: Animalismo 2</p><p>■ Pré-requisito: Fusão com a Terra</p><p>■ Custo: Duas Checagens de Sangue</p><p>■ Sistema: Igual a Fusão com a Terra, exceto pelo fato de o vampiro não estar limitado pela composição da superfície com que se funde. Alguns vampiros são famosos por terem se fundido com as paredes dos seus refúgios, enquanto outros escondem-se sob água empoçada. Além disso, o vampiro pode escolher experimentar qualquer estímulo sensorial dentro de uma área de 1,6 km a partir do ponto onde utilizou o poder, através dos sentidos de animais que se encontram nas proximidades dos eventos. No caso de eventos intencionalmente escondidos, um teste de Raciocínio + Animalismo vs. a parada de dados relevante é exigido. Despertar desse estado antes do cair da noite seguinte requer um teste de Determinação + Proteanismo (Dif. 4), e mesmo assim pode demorar até uma hora para o vampiro reemergir por completo. Uma Vitória Crítica permite o despertar instantâneo.</p><p>■ Duração: Um dia ou mais, ou até o usuário ser perturbado fisicamente</p>",
+      "bonuses": [],
+      "discipline": "protean",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Companion",
+        "page": "28"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "One with the Land"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Forma do Sacramento Sanguíneo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Aprendido apenas pelos mais ostentosos Tremere, este poder é usado para manipular sangue ou Vitae em imagens finamente trabalhadas – quer seja criando truques espalhafatosos para entretenimento no Elísio, ou tornando sangue fluído em sinais herméticos meticulosamente precisos.</p><p>■ Custo: Gratuito (Uma Checagem de Sangue, caso utilize o próprio Vitae)</p><p>■ Paradas de Dados: Destreza + Feitiçaria de Sangue</p><p>■ Sistema: A Dificuldade do teste varia de acordo com a complexidade da imagem desejada. Uma Falha faz com que o sangue não responda, enquanto uma Vitória Crítica não só cria a forma, mas permite que o sangue seja remodelado sem qualquer teste adicional pelo restante da cena.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "bloodsorcery",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Winter’s Teeth #3",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Shape of the Sanguine Sacrament"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Laço Transitivo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>O vampiro é capaz de estender as propriedades do Laço de Sangue de seu Vitae, mantendo seu alcance mesmo quando estocado ou presente no corpo de um carniçal. Qualquer um que beba esse Vitae será afetado como se tivesse ingerido-o diretamente do pulso do vampiro. Desenvolvido pelos Tremere como uma tentativa falha de contornar sua Perdição de clã, esse poder ressurgiu entre os membros do Sabá, que possuem menos limitações de clã em suas Disciplinas.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: O vampiro faz uma Checagem de Sangue ao estocar seu Vitae ou alimentar um carniçal. Cada uso enfeitiça 3 Checagens de Sangue. Quem se alimentar do sangue sob Laço Transitivo permanecerá inconsciente de seu efeito até encontrar-se com seu eventual Regente, embora haja relatos de breves vislumbres dele durante o sono diurno. Todas as regras de Laço de Sangue são aplicadas normalmente.</p><p>■ Duração: Não aplicável</p>",
+      "bonuses": [],
+      "discipline": "bloodsorcery",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "49-50"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Transitive Bond"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Reclamação de Vitae",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Independentemente da distância, o sangue clama pelo sangue. O vampiro é capaz de recuperar o sangue que utilizou para criar carniçais reclamando o que foi dado. O Vitae que corre nas veias dos carniçais se rebela, voltando para sua fonte original através de meios místicos, causando grande dano no processo. Anciões do Sabá são conhecidos por manter carniçais exclusivamente com esse propósito, uma reserva de emergência disponível a todo o tempo e em qualquer lugar.</p><p>■ Custo: Mácula+</p><p>■ Sistema: O vampiro se concentra por 1 turno e escolhe quais de seus servos devem pagar a dívida de Sangue, não importando sua distância no momento. O vampiro recupera 2 pontos de Fome para cada carniçal utilizado (os alvos sofrem 5 pontos de Dano Agravado, enquanto seus corpos envelhecem e se esvaziam violentamente do Vitae). Esse é um poder cruel, causando Máculas adicionais.</p><p>■ Duração: Não aplicável</p>",
+      "bonuses": [],
+      "discipline": "bloodsorcery",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "50"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {
+      "babele": {
+        "translated": true,
+        "hasTranslation": true,
+        "originalName": "Reclamation of Vitae"
+      }
+    },
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Mensagem Sangrenta",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode transmitir uma mensagem escrita através de superfícies espelhadas.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um espelho, sangue humano suficiente para escrever a mensagem e luz UV.</p><p>■ Processo: O conjurador foca-se em um tipo específico de indivíduo (mortal, vampiro, sexo masculino, estudante, etc.) e banha o espelho com a luz UV. Então, escreve a mensagem com a ponta do dedo, utilizando o sangue como tinta. A mensagem aparece em outra superfície espelhada que o conjurador já tenha visto antes quando o alvo designado passar por ela.</p><p>■ Sistema: Para cada sucesso, a mensagem aparece para um alvo que passe pela superfície espelhada (na língua e caligrafia escrita pelo conjurador). A mensagem se apaga assim que é lida uma vez.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Let the Streets Run Red",
+        "page": "77"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Proteção da Carta",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode criar um selo que protege uma carta de ser aberta por qualquer um, exceto o destinatário.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Cera, sangue de pombo, sangue de cachorro.</p><p>■ Processo: O autor da mensagem (que não precisa ser o conjurador) escreve o destinatário da carta com o sangue de pombo. Então, o conjurador derrete a cera e a mistura ao sangue de cachorro para selar a carta.</p><p>■ Sistema: A rolagem do Ritual é feita quando alguém tenta romper o selo. Uma Vitória faz com que qualquer um que não seja o destinatário e tente romper o selo sofra 1 ponto de Dano Superficial; uma Vitória Crítica causa 3 pontos de Dano Superficial e a carta se destrói em chamas. Caso queira insistir em romper o selo, é preciso passar em um teste de Vigor + Determinação (Dif. 4/7).</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Let the Streets Run Red",
+        "page": "77"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Proteção do Rebanho",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode proteger um alvo ou localidade contra tentativas de alimentação.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Veneno de escorpião.</p><p>■ Processo: O conjurador mistura o veneno ao seu Sangue e desenha o símbolo de proteção em um mortal (Nível 1) ou na porta de um local (Nível 3).</p><p>■ Sistema: A rolagem do Ritual é feita quando outro vampiro tenta se alimentar do alvo. Uma Vitória faz com que o transgressor sofra 1 ponto de Dano Superficial; uma Vitória Crítica causa 3 pontos de Dano Superficial. Caso queira insistir na alimentação, é preciso passar em um teste de Vigor + Determinação (Dif. 4/7).</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Let the Streets Run Red",
+        "page": "77"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Persuadir a Flora",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual permite ao conjurador fazer a vida vegetal, como raízes, grama e galhos de árvores, agir em sua defesa.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue humano, sementes de papoula.</p><p>■ Processo: O conjurador lança a mistura de sangue e sementes de papoula sobre o solo, despertando toda a vida vegetal em uma área de 5 metros. Apesar de essas plantas raramente serem letais em seus ataques, elas podem desabilitar e alarmar suas vítimas.</p><p>■ Sistema: Uma Vitória faz com que os ingredientes lançados animem a vida vegetal. A flora afetada causa uma penalidade de –2 dados em rolagens Físicas a todos os pegos na área do Ritual, enquanto as plantas agarram e fazem os alvos tropeçarem. Uma vítima que permaneça na área por mais de 1 turno deve fazer uma rolagem de Destreza + Atletismo (Dif. 3), ou será agarrada e sofrerá 1 ponto de Dano Superficial por turno enrolado. Em caso de Vitória Crítica, o dano causado pelos ataques das plantas é dobrado. As plantas atacarão qualquer um que não seja o conjurador. Esse efeito permanece ativo até o fim da cena.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "55-56"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Amortecer o Medo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual permite ao conjurador extinguir brevemente de si o medo natural que vampiros têm do fogo.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um objeto sagrado, como um crucifixo, uma Bíblia ou o Alcorão.</p><p>■ Processo: O conjurador deve queimar o símbolo sagrado antes de caminhar sobre, passar por ou interagir de algum modo com o fogo. O objeto não precisa ser destruído, apenas exposto ao fogo.</p><p>■ Sistema: Uma Vitória concede ao conjurador +2 dados em todas as rolagens ligadas a resistir ao Rötschereck. Uma Vitória Crítica faz com que o conjurador não precise realizar qualquer rolagem de Frenesi. Esse efeito permanece ativo até o fim da cena.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "67"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Beelzebatit",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual faz com que criaturas vivas de ordem inferior sejam repelidas da área. Animais evitam o local, vermes se arrastam para fora dele e até mesmo plantas adquirem uma forma lamentável. O Ritual normalmente é usado como uma precaução contra espiões de Animalismo ou para prevenir infestações de criaturas que seriam atraídas pelos restos dos massacres que o Sabá costuma deixar em seu caminho.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Vinagre ou álcool.</p><p>■ Processo: O conjurador asperge o líquido no chão e caminha em sentido anti-horário, circundando a área desejada.</p><p>■ Sistema: Uma Vitória faz com que criaturas vivas de intelecto animal e abaixo abandonem apressadamente a área, que pode chegar a até cem metros quadrados. Depois disso, nada previne que um animal diretamente controlado retorne, mas isso torna sua presença evidente. O efeito dura uma cena ou uma noite, o que vier primeiro.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "50"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Enriquecer o Sangue",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual aumenta a potência do sangue humano, permitindo ao vampiro se sustentar com uma quantidade menor de sangue. Este Ritual é o centro de algumas atividades sociais, permitindo que mais bocas provem do mesmo indivíduo e facilitando críticas culinárias comparativas. Apenas humanos podem ser submetidos a este Ritual; ele não tem qualquer efeito em Vitae.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Meio frasco do sangue do alvo, 5 litros de sangue humano não processado.</p><p>■ Processo: O conjurador derrama lentamente o sangue não-processado no frasco, que nunca se enche. Uma vez que todo o sangue foi adicionado, o frasco meio-cheio deve ser inserido de volta no alvo.</p><p>■ Sistema: Uma Vitória faz com que o sangue do alvo se torne misticamente rico e saboroso. Um gole de suas veias alimenta o dobro do normal. Uma Vitória Crítica permite que até 2 vampiros zerem sua Fome ao compartilhar a presa. Se deixado vivo, os efeitos do Ritual permanecem no alvo por uma semana. Como o Ritual torna o sangue da vítima grosso e hipercoagulante, isso pode gerar algumas complicações médicas. Se utilizado uma segunda vez no mesmo alvo, seu sangue se torna muito grosso e impossível de beber, além de matar o humano.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Forbidden Religions",
+        "page": "76-77"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Toque de Ishtar",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode converter uma dose de seu Vitae em uma droga de contato que coloca a vítima em um estado completamente suscetível a Disciplinas como Presença e Dominação, além de facilitar interações como manipulação e interrogatório.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um pouco de haxixe.</p><p>■ Processo: O conjurador mistura o haxixe com seu sangue e os esfrega na ponta dos dedos enquanto recita ou sussurra o encantamento.</p><p>■ Sistema: Depois que o Vitae estiver no corpo da vítima, é preciso fazer a rolagem contra o Vigor + Determinação do alvo. A vítima recebe uma penalidade de dados equivalente à margem de sucessos para qualquer rolagem envolvendo Autocontrole ou Determinação por uma cena.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Camarilla",
+        "page": "168"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Chamar o Remanescente da Aura",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual permite ao conjurador conversar com a aura residual de alguém que já morreu.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um cadáver humano ou de um vampiro destruído.</p><p>■ Processo: O Ritual deve ser realizado próximo ao corpo do alvo.</p><p>■ Sistema: Uma Vitória permite ao conjurador conversar com a aura animada do alvo como se ele ainda estivesse vivo por uma cena. Esta comunicação não é com um espírito, então só é possível ter acesso às memórias do alvo até o momento de sua morte. Uma Vitória Crítica estende a duração da comunicação pelo restante da noite.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "171"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Realçar Discrasia",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Um sabor único é um mimo que deve ser compartilhado. Este Ritual permite que vários vampiros se alimentem de uma discrasia sem destruí-la ou precisar esperar seu “tempo de recarga”. Geralmente, o conjurador utiliza Enriquecer o Sangue no alvo, estendendo sua utilização.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um objeto importante para o alvo, apropriado para a ressonância da discrasia.</p><p>■ Processo: O conjurador deve provar o sangue do alvo e, então, segurar o objeto, concentrando-se em sua ressonância. O objeto deve ser devolvido ao seu dono para que o ritual se conclua.</p><p>■ Sistema: Uma Vitória faz com que a concentração do sangue aumente e a utilidade da discrasia se expanda, provendo seus efeitos a todos que saciarem ao menos 1 ponto de Fome no alvo. Esse efeito se dissipa após 3 noites.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Forbidden Religions",
+        "page": "77"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Mortalha de Silêncio",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual transforma um ambiente interno em uma área na qual nenhum som consegue escapar, permitindo assassinatos sem gritos, arrombamentos de cofres sem o zumbido da broca e detonações sem o rugido da explosão.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Uma peça de tecido, geralmente seda, um anel de ouro através do qual o tecido possa passar.</p><p>■ Processo: O conjurador passa o tecido pelo anel de ouro, banha cada uma de suas pontas em Vitae e fixa o objeto em uma maçaneta ou fechadura.</p><p>■ Sistema: Uma Vitória cria uma mortalha de silêncio impenetrável na sala na qual a porta serve de entrada ou saída. O efeito dura uma cena ou até que alguém remova a peça de tecido de seu lugar.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Forbidden Religions",
+        "page": "23"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Infusão de Vitae",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>O conjurador é capaz de instilar Vitae em um pequeno objeto.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um objeto pequeno.</p><p>■ Processo: O conjurador segura o objeto entre as mãos enquanto profere os encantamentos por 3 horas.</p><p>■ Sistema: Ao fim do Ritual, o objeto toma uma coloração avermelhada e armazena Vitae equivalente a uma Checagem de Sangue. Tocando o objeto, o conjurador pode libertá-lo de seu encanto, desfazendo-o em uma massa de Vitae, que pode ser utilizada para diversos fins, como Rituais ou alimentação.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Vampiro: a Máscara (V20)",
+        "page": "234"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Um com a Lâmina",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>A conexão do Banu Haqim com a realização de dano e morte é tanta que ele é capaz de falar com uma arma e mandá-la atacar com mais mira e letalidade. Muitos Banu Haqim são conhecidos por suas dedicadas armas, que algumas vezes os acompanham por séculos. Essas armas nunca enferrujam ou perdem o fio enquanto permanecerem na posse do vampiro. Caso alguém as clame como suas, os efeitos do tempo caem sobre ela instantaneamente, como um carniçal privado do Vitae de seu Senhor.</p><p>■ Custo: Uma ou mais Checagens de Sangue</p><p>■ Ingredientes: Uma arma com lâmina e Vitae suficiente para submergi-la completamente.</p><p>■ Processo: O conjurador submerge a arma em seu próprio Vitae e recita um mantra dedicando sua vida à arma. A arma deve permanecer submersa sem interrupção até o nascer do sol seguinte.</p><p>■ Sistema: Uma Vitória faz com que a arma absorva todo o Vitae e se torne misticamente dedicada ao conjurador. Sua qualidade se torna imaculável, a não ser que seja submetida a dano focado fora do alcance de seu proprietário. Adicionalmente, é possível derramar seu Vitae sobre a lâmina para receber um bônus de +2 dados ao utilizá-la por uma cena. Só é possível manter uma arma dedicada e, caso ela seja roubada e usada contra o conjurador, causa Dano Agravado, como represália pelo descuido.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Camarilla",
+        "page": "168"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Fogo no Sangue",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual permite ao conjurador invocar a agonia do fogo no sangue de uma vítima. Calor escaldante emerge das veias do alvo e causa dor intensa. O poder deste Ritual difere do Caldeirão de Sangue, podendo ser usado a distância e sendo mais um método eficiente de incapacitar que de matar a vítima.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Uma amostra de sangue do alvo, uma representação visual do alvo (como uma foto, pintura ou filmagem), uma vela de cera vermelha ou um isqueiro de ferro.</p><p>■ Processo: O conjurador se concentra na representação visual do alvo (que pode ser o próprio indivíduo) e queima a amostra de sangue. O efeito ocorre quase que imediatamente, fazendo o sangue da vítima esquentar em suas veias.</p><p>■ Paradas de Dados: Inteligência + Feitiçaria de Sangue vs. Determinação + Ocultismo/Fortitude</p><p>■ Sistema: A rolagem do Ritual é feita contra a Determinação + Ocultismo/Fortitude do alvo. Em caso de Vitória, cada ponto na margem causa 1 ponto de Dano Superficial na vítima, além de uma penalidade de –2 dados em todas as rolagens Físicas pelo restante da cena. Em uma Vitória Crítica, a penalidade aumenta para –3. Um vampiro alvo de Fogo no Sangue deve realizar uma Checagem de Sangue devido ao dano causado ao seu Vitae.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "67"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Olhos do Passado",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual mostra o que aconteceu em um ponto específico do tempo na localidade atual do conjurador.</p><p>■ Custo: Uma ou mais Checagens de Sangue</p><p>■ Ingredientes: Vitae.</p><p>■ Processo: O conjurador se posiciona no local desejado, corta a mão e deixa o Vitae cair sobre o solo.</p><p>■ Sistema: É necessário fazer uma Checagem de Sangue para cada ano que se queira voltar, até cinco anos. Uma Vitória faz com que o vampiro possa ver o que aconteceu ali como se estivesse presente. O número de sucessos do Ritual define a clareza da visão e quão fixada ela vai ficar na mente do conjurador ao retornar dela. Uma Vitória Crítica permite lembrar completamente da visão.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "172"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Ilusão da Morte Pacífica",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual cura feridas óbvias de um cadáver, fazendo com que o corpo pareça ter morrido de causas naturais.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Uma pena branca.</p><p>■ Processo: O conjurador espana simbolicamente o corpo com a pena.</p><p>■ Sistema: Uma Vitória faz com que o corpo tome a aparência de uma morte natural. O Ritual não adiciona sangue ao corpo, mas reduz a chance da falta de sangue ser notada. Uma Vitória aumenta a Dificuldade para determinar a causa da morte em +3; uma Vitória Crítica aumenta a Dificuldade em +5. O corpo deve ter pelo menos metade de sua quantidade original de sangue para que o ritual funcione.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "172"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Mente Gentil",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual fortifica a mente de um alvo contra o Frenesi.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um copo de cristal.</p><p>■ Processo: O conjurador compartilha o Vitae com o alvo enquanto sussurra as palavras de encantamento em seu ouvido, criando uma jaula temporária ao redor da Besta.</p><p>■ Sistema: Uma Vitória dá ao alvo um bônus de +4 dados em testes de Frenesi por uma cena. Uma Vitória Crítica estende a duração para a noite toda. Não é possível realizar este Ritual em si mesmo.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "172"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Mudança Não Prevista",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual força um Lupino a tomar sua forma de lobo.</p><p>■ Custo: Três Checagens de Sangue</p><p>■ Ingredientes: Sangue de lobo, um jarro de prata.</p><p>■ Processo: O conjurador derrama o conteúdo ao redor de uma área que pode variar entre 1 metro e o suficiente para cercar uma casa.</p><p>■ Sistema: É preciso fazer 3 Checagens de Sangue para realizar esse Ritual. Uma Vitória faz com que todos os Lupinos que cruzem a área definida automaticamente se transformem em sua forma de lobo, a não ser que passem em um teste de Força de Vontade vs. Inteligência + Feitiçaria de Sangue. Presos em sua forma de lobo, os lobisomens são incapazes de utilizar a força crua de sua forma semi-lupina. O Ritual dura uma noite, a não ser que a rolagem inicial seja feita com +2 níveis de Dificuldade; neste caso, o ritual fica ativo por 1 ano. Uma Vitória Crítica dobra o número de sucessos que o Lupino precisa atingir para escapar do ritual.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "172"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Vigia Sanguíneo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual forma um pequeno rato de Vitae que vai aonde for mandado e observa o que o conjurador quiser.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Pequenas quantidades de álcool, um recipiente de prata.</p><p>■ Processo: O conjurador enche o recipiente com doses medidas de álcool e de seu Vitae. Um rato feito dessa mistura começa a se formar e se solidificar até que esteja pronto para servir a seu mestre.</p><p>■ Sistema: O rato é ligado ao conjurador, que pode enxergar através de seus olhos. O rato irá a qualquer lugar que for instruído e observará o que for solicitado. É possível pedir para que o rato roube pequenos itens, mas é preciso explicar detalhadamente como é o objeto e onde ele se encontra. O rato permanece ativo até o amanhecer, desfazendo-se depois disso. Uma Vitória Crítica gera uma criatura capaz de seguir ordens bem mais precisas.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "174"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Mãos Laminadas",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual afia as mãos do conjurador como o fio de uma lâmina.</p><p>■ Custo: Duas Checagens de Sangue</p><p>■ Ingredientes: Um par de lâminas de metal.</p><p>■ Processo: O conjurador segura firmemente uma lâmina em cada mão enquanto realiza o Ritual. Ao final do processo, as lâminas se desfazem e as mãos do vampiro se tornam lâminas misticamente afiadas.</p><p>■ Sistema: É preciso fazer duas Checagens de Sangue ao fazer a rolagem do Ritual. Uma Vitória faz com que o vampiro cause +2 de Dano Superficial em testes de Briga (que envolva o uso das mãos). O conjurador deve ser muito cuidadoso ao segurar qualquer coisa (+1 de Dificuldade manuseando objetos delicados). Uma Vitória Crítica aumenta o dano causado para +3. O ritual dura uma noite.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "174"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Ilusão da Perfeição",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual cobre o conjurador com a ilusão da aparência de uma pessoa neutra, que se mistura facilmente na multidão.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Uma máscara lisa branca.</p><p>■ Processo: O conjurador recita as palavras de encantamento por uma hora com a máscara em seu rosto. Um suor de Sangue começa a se formar sob a máscara, espalhando-se por todo o corpo do vampiro até que ele esteja todo coberto por uma crosta carmesim que esconde sua verdadeira identidade.</p><p>■ Sistema: Uma Vitória faz com que o vampiro tome a forma de uma pessoa de aparência neutra, que facilmente se mescla em meio a uma multidão similar à Máscara de Mil Faces. Sentir o Invisível é capaz de ver através da ilusão com um teste de Raciocínio + Auspícios vs o número de sucessos na rolagem do Ritual. O disfarce dura uma cena; uma Vitória Crítica estende esse período para uma noite.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "174"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Casa Mal-Assombrada",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual cria a ilusão de que um local é mal-assombrado.</p><p>■ Custo: Três Checagens de Sangue</p><p>■ Ingredientes: Vitae.</p><p>■ Processo: O conjurador coloca uma gota de seu Vitae em cada entrada e saída da casa e sobre o telhado enquanto recita os encantamentos por 3 horas.</p><p>■ Sistema: É preciso fazer 3 Checagens de Sangue ao fazer a rolagem do Ritual. Uma Vitória faz com que a casa assuma o aspecto pesado de um local mal-assombrado. Transeuntes casuais evitarão o local a qualquer custo e até os mais corajosos mortais pensarão duas vezes antes de entrar ali. Mortais que desejem entrar devem passar em um teste de Autocontrole + Determinação vs. o número de sucessos na rolagem do Ritual. Os efeitos duram por 10 anos.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "174-175"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Sono de Judas",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual cria um veneno que incapacita seu alvo instantaneamente.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue da Árvore de Judas, ópio.</p><p>■ Processo: O conjurador destila e ferve o sangue da Árvore de Judas até que reste apenas uma substância parecida com piche, então a mistura a uma mesma quantidade de ópio. É possível utilizar a mistura como uma pasta ou liquidificá-la, sem qualquer perda em seu efeito.</p><p>■ Sistema: A rolagem do Ritual é feita quando o alvo é drogado, contra um número de dados igual à sua Vitalidade sem dano; uma Vitória Crítica imediatamente incapacita um vampiro e mata um mortal ou carniçal. O Sono de Judas perde seu efeito após um número de horas equivalente à Inteligência do conjurador.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Let the Streets Run Red",
+        "page": "77"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Invisibilidade Subterrânea",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual torna o conjurador invisível e inaudível enquanto estiver abaixo do nível do solo.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue e olhos de um rato.</p><p>■ Processo: Estando em um local subterrâneo, o conjurador drena o rato completamente e remove seus olhos, lançando-os no local menos iluminado possível. Este Ritual só pode ser performado em si próprio.</p><p>■ Sistema: Uma Vitória faz com que o vampiro se torne invisível e inaudível por uma hora. Caso o conjurador atinja o nível do solo, o Ritual cessa instantaneamente.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Fall of London",
+        "page": "128"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Vigor Comunal",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Baseado nos princípios da Vaulderie, este Ritual permite que o sacerdote compartilhe sua Potência de Sangue com seu grupo, enquanto amplia sua habilidade de mantê-los na linha.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Uma unha do sacerdote.</p><p>■ Processo: O sacerdote remove a unha de um de seus dedos e a parte em pedaços iguais ao número de participantes. A parte do sacerdote é colocada no cálice da Vaulderie e as outras são mantidas sob a língua de cada participante. Caso o ritual seja bem-sucedido, a unha se dissolve e é consumido juntamente ao Vitae.</p><p>■ Sistema: Em adição aos efeitos da Vaulderie, os membros do grupo tem sua Potência de Sangue aumentada para o mesmo nível do sacerdote. Adicionalmente, o sacerdote ganha +3 dados ao utilizar Dominação ou Presença nos membros do grupo. O efeito dura uma noite.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "50-51"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Ruína Galvânica",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual rompe violentamente os circuitos elétricos de uma área, fazendo-os entrar em curto. É frequentemente utilizado para eliminar alarmes, sistemas de segurança e luzes artificiais, mas possui o efeito colateral de poder gerar focos de incêndio.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Uma moeda de cobre.</p><p>■ Processo: O conjurador espalha seu Vitae sobre a moeda, deixa que ela caia no chão e a esmaga com o pé, como se estivesse apagando um cigarro. Caso o Ritual seja bem sucedido, a moeda se estilhaça como porcelana e espalha uma corrente que devasta qualquer sistema elétrico na área.</p><p>■ Sistema: Todos os equipamentos elétricos imediatamente deixam de funcionar. Isso inclui sistemas fechados como carros a bateria e geradores reservas. A área afetada é de um galpão grande ou um total de 3 andares, embora isso possa ser ampliado aumentando a Dificuldade do teste.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "51"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Banquete Sem Sangue",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual transforma sangue em um líquido cristalino.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um humano inconsciente, um cálice de cristal imaculado.</p><p>■ Processo: O conjurador entoa as palavras ritualísticas sobre o alvo por 3 horas. Durante esse período, o alvo enfraquece gradualmente, enquanto o cálice se enche com um líquido cristalino e de aroma adocicado.</p><p>■ Sistema: Uma Vitória faz com que o cálice se encha, matando a vítima humana. O líquido transparente funciona exatamente como sangue fresco pela próxima hora. Caso um vampiro se alimente apenas desse líquido por pelo menos 1 mês, seu Vitae se torna completamente cristalino. Apesar de possuir todas as funções normais, esse Vitae tem um efeito diferente em quem o consome: até a próxima noite, ele se torna vulnerável à Diablerie. O possível diablerista recebe +3 dados na rolagem de Força + Determinação contra a vítima e pode aumentar sua Potência de Sangue independentemente do poder do alvo. Além disso, a aura do diablerista não ganha os veios negros que geralmente acompanham o ato.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Forbidden Religions",
+        "page": "66-67"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Redistribuição Estrutural",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual permite ao conjurador canalizar sua vontade sobre a constituição física de um alvo.</p><p>■ Custo: Uma Checagem de Sangue (e Força de Vontade)</p><p>■ Ingredientes: Argila e Vitae suficientes para cobrir todo o corpo do alvo.</p><p>■ Processo: O conjurador cria um unguento com os ingredientes e o espalha pelo corpo do alvo. Então, recita por 3 horas os encantamentos, enquanto a pele absorve a mistura.</p><p>■ Sistema: Após a rolagem do Ritual, o corpo do alvo se torna maleável e suscetível à vontade do vampiro. Ao custo de 1 ponto de Força de Vontade por alteração, o conjurador é capaz de emular os efeitos de Redistribuição, do poder Vicissitude (todas as regras do poder devem ser respeitadas). Os efeitos são permanentes e desfazer as mudanças envolve a realização de um novo Ritual (respeitando o custo de Força de Vontade e as regras de Vicissitude).</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Homebrew",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Inocência do Coração Infantil",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual permite ao vampiro mascarar sua aura para usuários de Auspícios.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um brinquedo pertencente a uma criança mortal.</p><p>■ Processo: O conjurador infunde seu Vitae no brinquedo, mesclando misticamente a inocência da criança com sua própria aura.</p><p>■ Sistema: Enquanto o vampiro carregar o brinquedo consigo, sua aura será de um branco brilhante, não manchada sequer pelo vampirismo. Caso o usuário de Auspícios queira enxergar através do disfarce, precisa passar em um teste de Inteligência + Auspícios vs. Inteligência + Feitiçaria de Sangue +4 dados. O ritual dura uma noite, a não ser que a rolagem inicial seja feita com +2 níveis de Dificuldade; neste caso, o Ritual fica ativo por 1 ano. Uma Vitória Crítica dobra a duração do ritual.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "172-173"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Rasgar a Doce Terra",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual rasga a terra para revelar um vampiro utilizando Fusão com a Terra.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um chicote de couro.</p><p>■ Processo: O conjurador deve encontrar o local em que um vampiro esteja utilizando a Fusão com a Terra e derramar Vitae sobre ele, acertando o chão repetidamente com o chicote.</p><p>■ Sistema: Uma Vitória faz com que o chão se abra, revelando o vampiro que está ali. O Ritual automaticamente desperta o alvo, a não ser que o mesmo esteja em torpor. Uma Vitória Crítica rasga o solo sem despertar o alvo.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "173"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Maldição Proteânica",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual transforma o alvo em um morcego, semelhante ao poder Metamorfose, da Disciplina Proteanismo.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um frasco com sangue de morcego com raiva.</p><p>■ Processo: O alvo deve beber o sangue de morcego misturado ao Vitae do conjurador.</p><p>■ Sistema: Uma Vitória transforma o alvo em um morcego, como no poder Metamorfose. Caso queira resistir ao processo, é preciso fazer um teste de Vigor + Ocultismo vs Inteligência + Feitiçaria de Sangue. Se falhar, o alvo ficará preso em uma forma de morcego humanoide terrivelmente deformada. Este Ritual pode ser realizado em vampiros e mortais, durando até que o conjurador decida desfaze-lo ou até o fim da noite. É possível fazer uma nova rolagem de ritual a cada noite, caso o conjurador deseje manter seu efeito. Uma Vitória Crítica dobra a duração do ritual.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "The Chicago Folios",
+        "page": "173-174"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Creatio Ignis",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>O conjurador carrega uma chama faminta que sai de sua pele, usando uma camada de Vitae como proteção, e pode incendiar itens e pessoas utilizando esse fogo. Este Ritual é uma fenomenal brecha na Máscara, já que é inteiramente visível e pode causar intenso dano no ambiente, sem contar a camada sangrenta nas mãos do conjurador antes da ativação.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Vitae (de qualquer vampiro) suficiente para cobrir os braços até os cotovelos, a fonte de uma chama (como um isqueiro).</p><p>■ Processo: O conjurador mergulha seus braços no Vitae e deve resistir à tentação de se alimentar e ao Frenesi. Ao extrair os braços, exposição a uma chama incendia o Vitae, ao invés do conjurador. O vampiro pode, então, incendiar alvos utilizando o fogo em sua pele.</p><p>■ Sistema: Caso o conjurador esteja com 4 ou mais de Fome, é preciso fazer uma rolagem de Frenesi de Fome. A qualquer momento da noite, o conjurador pode fazer a rolagem do Ritual. Uma Vitória cria chamas sobre as mãos e braços do conjurador. Qualquer vampiro próximo deve fazer uma rolagem de Frenesi de Terror (Dif. 2). O conjurador pode tocar outros rolando Destreza + Briga em combate para infligir 2 de Dano Agravado. Agarrar incendeia as roupas do alvo, causando dano contínuo a cada turno até apagar o fogo com uma rolagem de Autocontrole + Sobrevivência. O conjurador só é resistente ao fogo em seus braços e pode se queimar normalmente em outras partes do corpo. As chamas do braço se extinguem quando o conjurador desejar ou ao fim da cena.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cult of the Blood Gods",
+        "page": "67-68"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Recompensa do Éden",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este raro Ritual permite que o conjurador drene o sangue e energia de todas as criaturas vivas de uma área, alimentando-o sem que tenha sequer que mostrar suas presas.</p><p>■ Custo: Uma Checagem de Sangue (e Máculas)</p><p>■ Ingredientes: Um cadáver, uma árvore viva, uma maçã fresca, uma maçã podre.</p><p>■ Processo: O conjurador deita o cadáver (a idade do corpo não faz diferença) aos pés da árvore. A maçã fresca é colocada na boca do cadáver e a podre na boca do vampiro (caso a maçã não caiba na boca do cadáver, é preciso forçá-la, deslocar a mandíbula ou criar outra solução, desde que ela entre ali). Enquanto o corpo é rapidamente fundido à raiz da árvore, a terra drena o sangue de mortais até a 1 km de distância e o libera através da maçã podre na boca do vampiro, saciando sua Fome.</p><p>■ Sistema: Uma Vitória sacia a Fome até que reste apenas 1; em uma Vitória Crítica, a Fome é reduzida a zero, sem precisar matar. Essa alimentação desconsidera qualquer penalidade de alimentação ligada à Potência de Sangue. Uma Falha Crítica faz com que o vampiro caia em um Frenesi de Fome. Dependendo do local de realização do ritual, é possível que ocorram Máculas adicionais, caso isso vá contra uma Convicção ou Exclusão de Presa do conjurador.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cult of the Blood Gods",
+        "page": "56"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Portão Simulacro",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Blood_Sorcery_symbol.png",
+    "system": {
+      "description": "<p>Este Ritual permite a construção de um portal que possibilita que múltiplos vampiros atravessem vastas distâncias em uma questão de momentos. Embora apenas um desses portais seja conhecido, conjuradores do Sabá acreditam que é apenas uma questão de tempo até que outros sejam construídos, permitindo meios de realizar ataques rápidos e devastadores no coração de domínios de Seitas rivais.</p><p>■ Custo: Uma Checagem de Sangue (e Máculas)</p><p>■ Ingredientes: Tudo o que for necessário para criar uma cópia do destino desejado, além de um sacrifício vampírico e um sacrifício mortal para cada possível viajante.</p><p>■ Processo: É preciso construir uma cópia exata do destino desejado, quer seja uma porta, arco, alçapão ou qualquer outra estrutura designada como portal. Isso exige ao menos algumas semanas de documentação dessa localização para catalogar materiais, tirar fotos e tomar medidas. A construção da réplica deve ser realizada em uma área consagrada com muito sangue. Durante a construção, é preciso sacrificar um mortal para cada possível viajante e espalhar seus pedaços no local. A ativação final do portal se dá com o sacrifício de um vampiro.</p><p>■ Sistema: Uma Vitória faz com que o portal se abra para que o número desejado de vampiros atravesse e para que esse mesmo número retorne – não precisa ser os mesmo indivíduos. A passagem permanece aberta até que o número de retornos se equipare ao de idas. Mortais são incapazes de atravessar o portal.</p>",
+      "bonuses": [],
+      "discipline": "ritual",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "51"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Manto Sombrio",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro aplica a influência do Oblívio nas sombras do ambiente, tornando sua aparência mais sinistra e ameaçadora.</p><p>■ Custo: Gratuito</p><p>■ Sistema: O vampiro ganha +2 dados em testes de Furtividade e Intimidação contra mortais.</p><p>■ Duração: Passiva</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "293"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Visão do Oblívio",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro fecha seus olhos. Ao abri-los, sua pupila está completamente dilatada e ele pode enxergar claramente na mais completa escuridão, além de perceber fantasmas que não estão efetivamente escondendo sua presença.</p><p>■ Custo: Gratuito</p><p>■ Sistema: Ao ativar o poder, o vampiro se torna sobrenaturalmente afinado com a escuridão, ignorando qualquer penalidade de baixa luminosidade, inclusive de origem sobrenatural. Se um fantasma estiver presente no ambiente e não estiver tentando permanecer escondido, ele se torna visível para o vampiro. Nesses casos, os fantasmas aparecem na forma que quiserem, quer seja como um humano carregando as feridas que causaram sua morte, como monstruosidades espectrais ou com corpos perfeitamente imaculados. Fantasmas não percebem automaticamente que um vampiro os viu, mas, ao fazê-lo, muitos reagem com medo ou fúria, ao invés de passivamente. Este poder não concede a habilidade de interagir com fantasmas.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "293"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Cinzas às Cinzas",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro é capaz de destruir um cadáver – fresco ou morto há tempos – ao introduzir Vitae em seu corpo. Este poder não funciona em vampiros, mas é capaz de destruir cadáveres reanimados.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Vigor + Oblívio vs. Vigor + Medicina/Fortitude</p><p>■ Sistema: O vampiro introduz o Vitae no corpo e, caso não esteja reanimado, ele se desintegra em 3 turnos, sem a necessidade de qualquer rolagem. Caso o corpo esteja reanimado, é preciso fazer uma rolagem resistida. Em caso de Vitória, o corpo se desintegra em 5 turnos menos a margem (o corpo sofre penalidade de –2 dados em rolagens Físicas enquanto se desfaz). Em uma Vitória Crítica, o corpo se desintegra imediatamente. Em uma Falha Total, o corpo se torna putrefato, mas não desintegra, tornando-se imune a usos futuros deste poder.</p><p>■ Duração: Variável</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "204"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "O Grilhão de Ligação",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro fecha os olhos e, ao abri-los, suas íris manifestam um reflexo fraco dos arredores e torna o usuário capaz de identificar e localizar objetos e locais importantes para espíritos. Esses grilhões agem como âncoras que ligam o morto à existência. Conhecer ou possuir esses grilhões ajudam o necromante a melhor manipular o espírito. Grilhões manifestam auras variáveis, alguns emanando vitalidade e um brilho dourado, outros emanando decadência, e outros ainda irradiando aromas importantes para o espírito, como o cheiro de pão fresco, gasolina ou cigarro.</p><p>■ Custo: Gratuito</p><p>■ Paradas de Dados: Raciocínio + Oblívio</p><p>■ Sistema: Após a rolagem, os sentidos do vampiro se tornam sobrenaturalmente afinados com as energias de grilhões, permitindo-o identificar essas auras por meio da visão, olfato e outros sentidos. Enquanto este poder está em uso, se o necromante for distraído por qualquer atividade ao seu redor, recebe uma penalidade de –2 dados em rolagens de Destreza ou Raciocínio.</p><p>■ Duração: Variável</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "204"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Projeção Sombria",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Oblívio é uma Disciplina poderosa, mas pode ser contornada com a simples ausência de sombras para conjurá-la. Esse poder utiliza a própria escuridão do usuário para projetar sombras sobrenaturais das quais outros poderes podem se manifestar, independentemente de quão iluminado está o ambiente. As sombras normalmente imitam os movimentos do usuário, mas podem algumas vezes parecer distorcidas e monstruosas, refletindo o temperamento do vampiro.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: Ativar esse poder conjura uma sombra sobrenatural do corpo do vampiro, que pode ser removida apenas pela luz direta do sol. Qualquer um presenciando a cena pode perceber que a sombra não vem de nenhuma fonte de luz com uma rolagem de Raciocínio + Percepção. O vampiro pode direcionar sua sombra, alongando-a e distorcendo-a (mas nunca desvinculando-a de si) como quiser, mas às vezes ela pode agir por conta própria (a cargo do narrador). Para propósitos como Perspectiva Sombria, a sombra pode ser alongada até o dobro do valor de Oblívio do usuário em metros. Quem estiver ao alcance da sombra sofre +1 de Dano Superficial à Força de Vontade em conflitos sociais.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "293-294"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Braços de Ahriman",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro conjura extensões abissais de locais não iluminados dentro de sua área de visão. Sombras locais se distorcem, enquanto tentáculos serpenteiam delas e convergem para uma ou mais vítimas. Seja circundando diretamente o corpo da vítima ou atacando misticamente sua sombra, esses tentáculos são capazes de segurá-la e até mesmo sufocá-la.</p><p>■ Amálgama: Potência 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Raciocínio + Oblívio</p><p>■ Sistema: O vampiro gasta 1 turno para invocar os tentáculos. Então, ele pode utilizar ataques de pancada ou agarrão contra alvos distantes nos turnos subsequentes. Os tentáculos causam Dano Superficial ou agarrão, somando metade da Potência do usuário (arredondando para cima) como bônus de dano. O vampiro não pode realizar qualquer outra ação enquanto estiver utilizando esse poder. Os tentáculos também podem ser usados para executar tarefas simples. A distância que os tentáculos são capazes de alcançar é o dobro do nível de Oblívio do usuário em metros, sempre considerando que, sendo sombras, eles se movem através de superfícies, não pelo ar. Os tentáculos possuem 3 pontos de Vitalidade e utilizam Raciocínio + Oblívio para evitar ou resistir a ataques. Sendo sombras bidimensionais, só é possível feri-las com uma fonte forte de luz, como fogo ou luz do sol. Os tentáculos prendem suas vítimas por meios mágicos, então é preciso um teste de Determinação + Autocontrole para tentar se livrar.</p><p>■ Duração: Uma cena ou até ser destruído</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "294"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Precognição Fatal",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Precognição Fatal permite prescrutar qualquer não-vampiro e experienciar uma visão de sua morte iminente, quer ela vá ocorrer em minutos ou décadas. Os olhos do Membro se tornam negros e ele fica completamente inerte enquanto as imagens do destino passam por sua mente. O destino pode ser trapaceado, mas há um custo em fazê-lo.</p><p>■ Amálgama: Auspícios 2</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: O vampiro precisa ser capaz de ver ou ouvir seu alvo enquanto utiliza este poder. Após a rolagem, o vampiro fica paralisado enquanto a visão ocorre, impedindo-o de realizar qualquer forma de interação física ou social por 1 turno. Quanto maior a margem de sucessos, mais clara a visão. Uma Vitória dá uma visão do corpo e cada sucesso adicional provê pistas adicionais, como a forma da morte, tempo e local da morte, o nome e rosto do primeiro indivíduo a encontrar o corpo. Uma Vitória Crítica garante uma visão clara, juntamente com o senso do motivo, caso o alvo tenha sido intencionalmente assassinado. Uma Falha Total deixa o vampiro cego pelo restante da cena e incapaz de utilizar esse poder no alvo novamente. Se alguém tentar subverter o destino observado, encontrará tudo trabalhando contra sua ambição. Isso adiciona +1 de Dificuldade em todas as rolagens referentes à tentativa de contornar o destino. Essa penalidade se aplica até que a profecia seja cumprida ou evitada.</p><p>■ Duração: Até que seja cumprida ou evitada</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "204-205"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Onde o Véu se Esvai",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Vampiros com uma afinidade ao Oblívio podem sentir locais onde o Véu entre o mundo dos vivos e as Terras Sombrias se afina. Em locais em que o Véu é muito fino, a saúde mortal sofre e o uso de Oblívio se torna mais fácil, caso o vampiro saiba como se aproveitar do vão no Véu.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Raciocínio + Oblívio</p><p>■ Sistema: Uma Vitória pode determinar a densidade do Véu na localidade atual, com uma área no tamanho aproximado de uma construção ou marco. Em uma Vitória Crítica, é revelado se a densidade do Véu sofreu alguma alteração recente. Em uma Falha Total, o poder sai pela culatra e dá uma falsa leitura. Sem o uso deste poder, usuários de Oblívio não podem se beneficiar do afinamento do Véu. Os diferentes graus de densidade do Véu e seus efeitos são: <br>• Impenetrável: Vampiros e espíritos não podem cruzar o Véu aqui. <br>• Grosso: Sem efeito. <br>• Fino: –1 Dificuldade Oblívio. <br>• Desgastado: –2 Dificuldade Oblívio. <br>• Ausente: –2 Dificuldade Oblívio; espíritos podem atravessar livremente; mortais sofrem 2 Dano Superficial nessa área e não podem ser curados até se retirar.</p><p>■ Duração: Um turno</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "205"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Perspectiva Sombria",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro é capaz de projetar seus sentidos para qualquer sombra em seu campo de visão, vendo e ouvindo como se estivesse escondido ali. Isso inclui sua própria sombra manipulada pela Projeção Sombria.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: Após ativar este poder, a presença do vampiro nas sombras só pode ser percebida através de meios sobrenaturais (como Sentir o Invisível). Enquanto o poder estiver ativado, o vampiro tem percepção do que está acontecendo em sua localização real e de onde ele lançou a Perspectiva Sombria, como se estivesse observando através de uma janela.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "294"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Toque do Oblívio",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro usando Toque do Oblívio canaliza o poder através de seu Vitae. Ao fazer contato físico com uma vítima, o elemento aniquilador passa do vampiro ao alvo, fazendo a área tocada esmorecer. Efetivo em qualquer parte do corpo, o toque atrofia e encurta músculos, arrebenta tendões e torna ossos quebradiços, efetivamente envelhecendo a área afetada. Seus usos principais são inutilizando um membro, sufocando uma garganta ou cegando um par de olhos.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: Depois de ativar o poder, o vampiro deve agarrar sua vítima (Força + Briga, caso a vítima esteja tentando resistir), causando 2 pontos de Dano Agravado e uma Penalidade Incapacitante. Se o ferimento for causado em um braço ou perna, o membro afetado é Aleijado e, no caso de mortais, é preciso uma longa reabilitação para reestabelecê-lo. Vampiros podem curar o dano como Dano Agravado comum. Da mesma forma, Toque do Oblívio pode ser utilizado para deixar o alvo mudo, surdo ou cego.</p><p>■ Duração: Um turno</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "294-295"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Aura da Decadência",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Membros com uma forte conexão com o Oblívio podem afetar o mundo ao seu redor, fazendo plantas murcharem, animais e humanos adoecerem e comida apodrecer. Alguns se aproveitam dessa aura como um poder, poluindo vitalidade com podridão e acelerando a erosão da vida. Este poder não é capaz de acelerar a decadência de cadáveres.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Paradas de Dados: Vigor + Oblívio vs. Vigor + Medicina/Fortitude</p><p>■ Sistema: Uma Vitória faz com que materiais orgânicos e inorgânicos que estejam até a 5 metros do usuário sofram. Materiais afetados desta forma se tornam tóxicos de ingerir. Essa comida e bebida tóxicas, caso consumidas, causam 2 Dano Superficial na cena seguinte e 1 Dano Superficial por cena até que ela obtenha sucesso em uma rolagem de Inteligência + Medicina. Caso alguma criatura viva seja pega pela aura, é feita a rolagem resistida. Caso o vampiro obtenha Vitória, para cada sucesso da margem, a vítima sofre 1 Dano Superficial. O dano é lentamente aplicado ao longo da cena. A aura dura toda uma cena e qualquer um com noção de cheiro pode sentir um odor podre emanando do vampiro, o que gera uma penalidade de –2 dados em rolagens Sociais positivas.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "205-206"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Banquete Passional",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Aparições não possuem corpos nem sangue, sendo movidas por emoções cruas. Amor, ódio, ganância, ou até mesmo um desejo por vingança podem manter uma aparição ao redor depois da morte de seu corpo. Um necromante talentoso pode se alimentar dessas paixões por um tempo, permitindo-o sobreviver sem sangue por mais tempo que seus similares. A alimentação se manifesta como um vortex rodopiante de poder entre o espectro e a mandíbula do vampiro, sem a necessidade de realmente morder para consumir sua paixão.</p><p>■ Amálgama: Fortitude 2</p><p>■ Custo: Gratuito (Máculas+)</p><p>■ Paradas de Dados: Determinação + Oblívio vs. Determinação + Autocontrole</p><p>■ Sistema: Um vampiro com este poder pode se alimentar da paixão de um espírito. Se mantendo a 3 ou menos metros de distância da aparição, é feita a rolagem resistida. Vitória causa 1 Dano Superficial na aparição e reduz 1 ponto de Fome do vampiro pelo restante da noite. Essa Fome retorna na noite seguinte, independentemente de Checagem de Sangue. Se alimentar de uma aparição pode gerar Máculas adicionais, a critério do narrador.</p><p>■ Duração: Passiva</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "206"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Mortalha Estigiana",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>A escuridão se derrama de uma sombra próxima como uma manta que cobre a área em uma escuridão equivalente a de uma noite sem lua e torna os sons abafados e indistintos. Exceto pelo conjurador, todos os capturados pelos efeitos desse poder se encontram com grande dificuldade de enxergar e ouvir seus arredores. Mortais são drenados de suas próprias vidas por este poder sufocante.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: O vampiro precisa se concentrar por 1 turno, espalhando as sombras sobre as superfícies desejadas. O efeito cobre uma área circular com raio equivalente ao dobro do nível de Oblívio do usuário em metros. Qualquer um capturado por esse poder sofre uma penalidade de –3 dados em todas as rolagens, a não ser que possua a habilidade de ver através de escuridão sobrenatural. Mortais que estejam na Mortalha Estigiana sofrem 1 Dano Superficial por turno que permanecer ali, devido aos efeitos sufocantes do poder.</p><p>■ Duração: Uma cena</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "295"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Aperto Umbroso",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro cria um portão temporário na sombra de um alvo, fazendo-o cair no Oblívio e sair em seus braços. A vítima parecerá afundar em sua própria sombra, aparecendo em seguida na sombra do vampiro. Essa breve jornada ao Oblívio é mais que suficiente para traumatizar o alvo, deixando-o completamente submisso ou violento.</p><p>■ Custo: Uma Checagem de Sangue (e Mácula)</p><p>■ Paradas de Dados: Raciocínio + Oblívio vs. Destreza + Raciocínio</p><p>■ Sistema: O vampiro deve ser capaz de enxergar o alvo e sua sombra. É feita a rolagem (contra um alvo parado e distraído, o teste não é resistido) e, em caso de Vitória, a sombra da vítima se desloca exatamente para debaixo dela, abrindo uma passagem sobrenatural. Em seguida, o alvo reaparece, caindo da sombra do vampiro. Um mortal despreparado voltará aterrorizado e possivelmente catatônico. Um vampiro deve fazer um teste de Frenesi de Fúria ou Terror (Dif. 4), a cargo do narrador.</p><p>■ Duração: Um turno</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "49"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Praga Necrótica",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Membros estudiosos clamam que Oblívio polui tudo o que toca, e este poder é um exemplo perfeito disso. Com apenas um toque, o vampiro pode contaminar o sangue de uma vítima mortal com uma doença que destrói e devasta seu corpo. Mais perigoso que esse fato em si é que essa doença corre o risco de se tornar contagiosa e infectar outros mortais.</p><p>■ Custo: Uma Checagem de Sangue (e duas Máculas)</p><p>■ Paradas de Dados: Inteligência + Oblívio vs. Vigor + Medicina/Fortitude</p><p>■ Sistema: A rolagem é feita enquanto o vampiro toca o alvo. Caso a vítima seja fraca (um bebê, idoso, doente, se recuperando de uma doença, morrendo, ou com 3 marcadores ou menos sem dano em sua trilha de Vitalidade), ela é automaticamente infectada. No caso de alvos saudáveis, a rolagem é resistida. Este poder não pode ser utilizado em vampiros. Vítimas da doença sofrem 1 Dano Agravado no início de cada cena subsequente à sua infecção. A doença dura um número de cenas igual ao nível de Oblívio do usuário. Sendo de origem sobrenatural, a doença não pode ser tratada medicamente, mas é curada bebendo Vitae. Uma Vitória Crítica permite fazer com que a doença seja transmissível pelo toque. Em uma Falha Total, o Sangue do próprio usuário convulsiona como se estivesse envenenado. O vampiro sofre 3 Dano Agravado e precisa fazer uma Checagem de Sangue.</p><p>■ Duração: Um turno para ativar</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "206-207"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Passo Sombrio",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Ao pisar em uma sombra, o usuário desaparece, reaparecendo em outra sombra que esteja em seu campo de visão. Se o vampiro entra no Labirinto ou meramente passa por sua superfície é uma fonte de conjectura entre muitos Lasombra e Hecata, mas o dano espiritual com o qual ele pode emergir implica que o usuário toca algo imundo ao usar este poder.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Sistema: O vampiro deve entrar em uma sombra larga o suficiente para cobri-lo e emerge de outra no turno seguinte. A sombra de saída deve estar em seu campo de visão, embora possa estar sendo vista através de meios místicos, como a Perspectiva Sombria, se desejado. É possível trazer um alvo consigo através da passagem, mas, a menos que o indivíduo esteja consentindo, ela precisa estar presa por um Agarrão. Caso a utilização do poder resulte em uma Mácula no vampiro, o passageiro também recebe a Mácula.</p><p>■ Duração: Um turno</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "295"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Avatar Tenebroso",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro ganha a habilidade de alterar sua própria substância em uma sombra, tornando-se um caminho bidimensional de escuridão capaz de passar por qualquer superfície e através de minúsculos espaços e rachaduras. Enquanto estiver nessa forma, o vampiro pode ser ferido apenas pelo fogo e pela luz do sol.</p><p>■ Custo: Duas Checagens de Sangue</p><p>■ Sistema: A transformação leva 1 turno, durante o qual o vampiro é incapaz de realizar qualquer outra ação. Uma vez que a transformação esteja completa, o vampiro pode se mover através do chão e de altas paredes, sendo limitado apenas por barreiras seladas. Vampiros utilizando Avatar Tenebroso podem cobrir suas vítimas, reduzindo sua parada de dados em –3 e sufocando mortais, como na Mortalha Estigiana. Caso esteja cobrindo um mortal, é possível se alimentar dele sem precisar sequer utilizar suas presas. Enquanto estiver em sua forma sombria, o vampiro não recebe qualquer dano de fontes físicas, a não ser de fogo e luz solar, mas Disciplinas mentais ainda podem surtir efeito sobre ele, a critério do narrador.</p><p>■ Duração: Uma cena ou até desativar</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Chicago by Night",
+        "page": "295"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Skuld Cumprido",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Este poder permite ao vampiro reintroduzir doenças já curadas, quebrar ossos há tempos calcificados e eliminar a imunidade de carniçais ao envelhecimento. Embora esse poder não funcione em vampiros, ele é uma forma eficiente de atingi-los através de seus servos e garantir de dívidas sejam pagas sem nunca ter sequer entrar em contato com o recebedor.</p><p>■ Custo: Duas Checagens de Sangue</p><p>■ Paradas de Dados: Vigor + Oblívio vs. Vigor + Medicina/Fortitude</p><p>■ Sistema: O vampiro realiza duas Checagens de Sangue para cobrir seu rosto e as palmas de suas mãos com Vitae enquanto se foca na face de seu alvo. Após a rolagem resistida, em caso de Vitória, a vítima é afetada por alguma condição séria que já teve e foi curada, como um câncer, um osso quebrado ou alguma outra doença. Os efeitos debilitantes dessa condição se manifestam imediatamente. Caso o alvo seja um carniçal, este poder remove sua imunidade ao envelhecimento e elimina qualquer Vitae de seu sistema, potencialmente resultando na morte de vítimas mais velhas. Em caso de Vitória Crítica, este poder pode matar a vítima parando completamente seu coração. Em uma Falha Total, o vampiro não pode utilizar este poder contra aquele indivíduo novamente.</p><p>■ Duração: Um turno</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "207-208"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Espírito Minguante",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Este poder canaliza entropia crua via uma rápida queda espiritual, atingindo a própria alma de seu alvo, quer seja mortal ou Membro. Um vampiro usando este poder arrisca Máculas adicionais, já que oblitera completamente o espírito da vítima, impedindo-a de retornar como uma aparição.</p><p>■ Custo: Duas Checagens de Sangue (e Máculas adicionais)</p><p>■ Paradas de Dados: Determinação + Oblívio vs. Determinação + Ocultismo/Fortitude</p><p>■ Sistema: O vampiro realiza duas Checagens de Sangue para cobrir suas mãos com Vitae e toca seu alvo. Após a rolagem resistida, em caso de Vitória, a vítima sofre 2 Dano Superficial à Força de Vontade para cada sucesso na margem. O ataque erode o espírito da vítima até que ela se torne um recipiente vazio. caso seja eliminado por este poder, a vítima não retorna como uma aparição depois de morrer.</p><p>■ Duração: Um turno</p>",
+      "bonuses": [],
+      "discipline": "oblivion",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "208"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "O Dom da Falsa-Vida",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Através desta Cerimônia, o vampiro pode erguer um cadáver ou um conjunto de cadáveres para realizar tarefas simples, únicas ou repetitivas.</p><p>■ Pré-requisito: Cinzas às Cinzas</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um ou mais cadáveres humanos, um pequeno unguento de sangue, catarro e bile.</p><p>■ Processo: Após aplicar o unguento nos corpos e realizar a Cerimônia, os cadáveres são animados a uma forma de falsa vida. Eles seguem um único comando do vampiro, desde que ele seja simples e os corpos sejam capazes de realizá-los fisicamente.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Vitória faz com que um número de cadáveres até o nível de Oblívio do vampiro se erga. Uma Vitória Crítica dobra o valor de Oblívio para essa contagem. A animação se encerra quando os corpos são destruídos ou quando concluem sua tarefa. Os cadáveres não se defendem de ataques e se decompõe normalmente; esta Cerimônia não garante qualquer forma de imunidade aos efeitos do tempo.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "208"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Conjurar Espírito",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Esta Cerimônia permite ao vampiro conjurar uma aparição do Submundo.</p><p>■ Pré-requisito: O Grilhão de Ligação</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um grilhão do alvo, uma foto ou outra representação visual, (ou assinatura) da aparição.</p><p>■ Processo: O necromante derrama seu Vitae sobre o grilhão e, enquanto estuda a imagem ou assinatura, chama pelo nome da aparição. Ela sente o chamado de seu grilhão e inicia a jornada de sua localidade no Submundo até o conjurador.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: A conjuração se encerra se o grilhão for movido do local da Cerimônia ou ao fim da cena, a não ser que uma Cerimônia separada for realizada para compelir ou ligar a aparição.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "209"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "A Pedra do Conhecimento",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode identificar a localização de espíritos específicos.</p><p>■ Pré-requisito: O Grilhão de Ligação</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Uma pedra da parede de uma igreja ou outra construção sagrada.</p><p>■ Processo: O necromante utiliza seu Vitae para escrever o nome do humano falecido na pedra.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Uma Vitória faz com que, caso o alvo ainda exista como fantasma, apareça para o vampiro na forma de uma visão, revelando sua exata localização.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Fall of London",
+        "page": "259"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Chamado do Viajante",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Esta Cerimônia simples é ensinada pelo culto de Shalim a todos os sacerdotes antes de saírem pelo mundo. Como todos os sacerdotes de Shalim estão ligados por seu laço com Apolleon, o Viajante, eles são capazes de usar sua eterna presença no Oblívio como um nexo entre si e seus outros seguidores.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: O livro negro presenteado na doutrinação do culto de Shalim.</p><p>■ Processo: Ao utilizar o Chamado do Viajante com o livro negro e o nome de outro Shalimita em mente, o sacerdote pode enviar uma ondulação através do Oblívio, chamando o alvo para sua localização.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: A rolagem da Cerimônia é feita com Dificuldade 3. O alvo pode decidir ignorar o chamado, mas as constantes visões acarretam em –2 dados em todas as rolagens envolvendo concentrar-se até o fim da cena. Uma Vitória Crítica permite ao vampiro enviar uma mensagem de única palavra juntamente à visão.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "93-94"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Despertar o Servo Homuncular",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Necromantes usam esta Cerimônia para criar espiões e perseguidores a partir de partes de corpos, como mãos ou crânios, ou de pequenos animais mortos, como ratos ou raposas.</p><p>■ Pré-requisito: Onde o Véu se Esvai</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: A parte do corpo ou carcaça animal, a arma utilizada para cortá-la ou matá-la e um unguento de urina, matéria fecal e sêmen.</p><p>■ Processo: O conjurador cobre a lâmina com o unguento de fluídos corporais e corta o membro desejado/sacrifica o animal. Após ser massageado com Vitae, o homúnculo ganha vida como um servo fiel e pode realizar tarefas como seguir alguém, guardar uma localidade e se esconder efetivamente.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: O homúnculo poderá seguir, espionar ou até mesmo intimidar um alvo. Caso o servo esteja a mais de 100 metros de seu criador, ele cai inerte, só despertando ao se aproximar novamente. O homúnculo permanece ativo por um número de noites igual à margem da rolagem. Uma Vitória Crítica cria um homúnculo eterno, enquanto uma Falha Total destrói todos os componentes envolvidos na Cerimônia.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "209"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Compelir Espírito",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Esta Cerimônia permite que o vampiro submeta uma aparição à sua vontade.</p><p>■ Pré-requisito: Onde o Véu se Esvai</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um grilhão do alvo, um item (ou ameaça) suficiente para danificar o grilhão.</p><p>■ Processo: O vampiro precisa estar próximo à aparição para usar este poder. O necromante lança uma porção de seu Sangue na direção da aparição enquanto segura o grilhão e o item destrutivo ou faz ameaças verbais.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: A rolagem da Cerimônia é feita contra a Determinação + Autocontrole da aparição. Sem um objeto que ameace fisicamente o grilhão, também é preciso fazer um teste de Manipulação + Intimidação. Uma Vitória permite que o vampiro comande à aparição um número de tarefas de Dificuldade moderada igual ao número de sucessos rolados. A assombração fica sob os serviços do vampiro até cumprir o comando, voltando ao Submundo depois disso. Em uma Vitória Crítica, o vampiro pode demandar qualquer tarefa da assombração, que dará o seu melhor para cumpri-la.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "210"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Cegando o Olho Mecânico",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro torna-se temporariamente imune a sistemas de segurança.</p><p>■ Pré-requisito: Projeção Sombria</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Uma malha de alumínio pequena.</p><p>■ Processo: O conjurador deve gastar uma cena em isolamento, contatando um espírito e ligando-o à malha de alumínio. Depois disso, a malha deve ser armazenada em um recipiente à prova de luz. No momento desejado, a malha é retirada do recipiente e ligada a alguma parte da roupa do conjurador.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: A rolagem da Cerimônia é feita ao vestir a malha de alumínio. Uma Vitória faz com que câmeras de vigilância peguem apenas uma imagem distorcida do conjurador. O efeito dura por uma cena ou até a malha ser removida.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "52"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Hospedar Espírito",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Esta Cerimônia permite que o vampiro abra seu corpo para ser possuído por um fantasma.</p><p>■ Pré-requisito: Aura da Decadência</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um tributo para o espírito, um inseto parasita, dois dentes retirados do vampiro.</p><p>■ Processo: O vampiro precisa estar próximo à aparição para usar este poder. O necromante oferece o tributo à aparição. Então, remove dois dentes de sua boca, geralmente com um alicate, e morde o inseto parasita com os dentes restantes. Finalmente, o conjurador abre a boca e a aparição pode decidir entrar ali e habitar o corpo do vampiro.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Em uma Vitória, a aparição permanece no corpo do vampiro por um número de cenas igual à margem da rolagem. Com o espírito em seu corpo, o vampiro ganha +2 dados em todas as rolagens Físicas e +2 de Vitalidade. O vampiro pode ouvir a aparição em sua cabeça, com seus conselhos, bajulações ou palavras de suporte transmitidas pelo narrador. <br><br>A aparição pode decidir afirmar sua possessão ao invés de agir como um passageiro. Para resistir, é preciso rolar Determinação + Autocontrole vs. Determinação + Autocontrole. Falha Total rejeita a influência da assombração. Em caso de Falha, a aparição dirige o corpo até o fim da cena, mas não pode cometer nenhum ato autodestrutivo. Em caso de Vitória, a aparição é completamente ejetada e retorna ao Submundo. Em uma Vitória Crítica, a aparição pode fazer o vampiro se ferir, mas retorna ao Submundo após aplicar o primeiro dano.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "211-212"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Hordas Cambaleantes",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Esta Cerimônia permite que o necromante erga um grupo de servos zumbis agressivos.</p><p>■ Pré-requisito: Aura da Decadência</p><p>■ Custo: Uma ou mais Checagens de Sangue (e Máculas)</p><p>■ Ingredientes: Um ou mais corpos humanos, um sacrifício humano fresco.</p><p>■ Processo: O vampiro sacrifica um humano, aspergindo seu sangue nos corpos que serão reanimados. Caso o vampiro obtenha sucesso na Cerimônia, os cadáveres se erguem e seguem os seus comandos.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Para cada corpo, é preciso realizar uma Checagem de Sangue, o que pode acarretar em um Frenesi de Fome (Dif. 2), dependendo da quantidade de zumbis que se queira erguer. Uma Vitória anima um número de zumbis igual ao seu nível de Oblívio ou quantidade de corpos preparados (o que for menor). Uma Vitória Crítica dobra o valor de Oblívio para essa contagem. Cadáveres animados desta forma não se decompõe e só entram em repouso caso comandados pelo vampiro, com sua morte final ou se destruídos.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "212"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Nome do Pai",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Os sacerdotes de Shalim foram todos treinados a usar sua voz como arma, cortando a camada açucarada que suas vítimas envolvem em seu amor pelo mundo. Ao invocar o nome de seu mestre sombrio e pedir sua ajuda, eles canalizam uma fração de seu poder em seu adversário e nublam sua mente com sombras, fazendo-o ficar parado estupefato pelo vazio do Oblívio.</p><p>■ Pré-requisito: Perspectiva Sombria</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: A habilidade de falar grego antigo, 5 pedaços de carvão.</p><p>■ Processo: O sacerdote recita o encantamento em grego antigo, invocando o nome de Shalim enquanto esmaga os pedaços de carvão com as mãos. É preciso manter contato visual com o alvo. Após esmagar o quinto carvão, uma sombra toma os olhos dos participantes, deixando-os completamente negros.</p><p>■ Paradas de Dados: Determinação + Oblívio vs. Determinação + Autocontrole</p><p>■ Sistema: A rolagem da Cerimônia é feita contra a Determinação + Autocontrole da vítima. Uma Vitória permite que o vampiro ative os efeitos da Cerimônia sempre que estiver na presença da vítima. Ao ativar, a vítima fica paralisada por um número de turnos igual à margem. A vítima pode gastar Força de Vontade igual ao número de turnos restantes para se livrar.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "94"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Fortezza Sindonica",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro cria uma barreira que pode impedir ataques ou espionagens de outros necromantes, distorcendo o véu de uma área específica. Qualquer espírito que tente cruzar a corrente é tragado para um estado semelhante a um eco físico, lhe causando tortura e terror.</p><p>■ Pré-requisito: Onde o Véu se Esvai</p><p>■ Custo: Três Checagens de Sangue</p><p>■ Ingredientes: Pó de ossos, sal, uma corrente longa o suficiente para cercar a área desejada, um dedo humano, bacia de metal.</p><p>■ Processo: A corrente é colocada de modo a cercar a área desejada. Os outros ingredientes devem ser misturados à mão na bacia e aplicados na corrente.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Para realizar esta Cerimônia é preciso fazer 3 Checagens de Sangue. A rolagem é feita no momento em que um espírito tenta cruzar as correntes. Uma Vitória faz com que o espírito sofra 3 pontos de Dano Superficial e –2 dados para utilização de quaisquer habilidades sobrenaturais. Uma Vitória Crítica permite ao necromante impedir a saída do espírito enquanto não passar em um teste de Força de Vontade (Dif. 4), que pode ser feito uma vez por cena.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Trails of Ash and Bones",
+        "page": "173"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Remendar o Véu",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode costurar pequenos rasgos no Véu e fortalecer seus trechos menos resistentes, tornando-o impenetrável.</p><p>■ Pré-requisito: Onde o Véu se Esvai</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Pó de ossos, uma agulha de ferro, linha cirúrgica, uma vela de sebo de bode.</p><p>■ Processo: O pó de ossos é espalhado pela área da Cerimônia. Então, o necromante deve se perfurar com a agulha de modo que a linha passe por baixo de sua pele. Com a agulha, runas ritualísticas devem ser desenhadas na vela e, em seguida, a linha deve ser enrolada ao redor da vela até que sua ponta saia de dentro da carne do necromante. A vela é colocada no centro da área cerimonial e acesa, gerando uma chama pálida e imóvel.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: A rolagem é feita ao acender a vela, com –1 dado para cada espírito presente nos arredores. Uma Vitória torna o Véu na área impenetrável enquanto a vela queimar. Em uma Vitória Crítica, a vela dura duas vezes mais e se torna impossível até mesmo espiar através do Véu.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Trails of Ash and Bones",
+        "page": "174"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Assombração Atormentadora",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Locais submetidos a essa Cerimônia comunicam um pavor tão miasmático que se torna difícil até mesmo respirar, quanto mais permanecer ali. Vampiros do Sabá costumam utilizar esse recurso para desencorajar visitantes indesejados das proximidades de seus refúgios comunais.</p><p>■ Pré-requisito: Aura da Decadência</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Mortais submetidos ao mais vil terror e sofrimento (quanto mais, melhor).</p><p>■ Processo: Tudo começa com uma “festa”. Um número de mortais é confinado no local da Cerimônia e deve ser submetido a terror e tortura que culmine em sua morte. Os pedaços de seus espíritos quebrados são ligados ao local e seus ossos enterrados sob ele.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Mortais que se aproximem do local são acometidos de um terror irracional, sendo necessário um teste de Autocontrole + Determinação por turno para permanecer ali. Vampiros são menos afetados pelos efeitos, devendo fazer ao menos um teste de Frenesi de Terror enquanto estiverem no local.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "52"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Vincular o Espírito",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Vampiros com acesso a esta Cerimônia possuem a habilidade de vincular aparições a localidades e pessoas específicas.</p><p>■ Pré-requisito: Praga Necrótica</p><p>■ Custo: Uma Checagem de Sangue (e Máculas adicionais)</p><p>■ Ingredientes: Um grilhão de uma aparição, um sacrifício de humano inocente, sal suficiente para cercar a área da propriedade ou o indivíduo.</p><p>■ Processo: O vampiro já deve ter uma aparição sob seu controle utilizando Compelir Espírito. O sacrifício humano é feito próximo ao local ou pessoa que a aparição será vinculada. Em seguida, é preciso misturar Vitae ao sal e pintar um círculo ao redor do alvo.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Uma Vitória vincula permanentemente a aparição ao alvo, a não ser que o vampiro cancele a Cerimônia. Qualquer emoção forte sentida pela aparição afeta os habitantes do local ou o indivíduo vinculado, causando uma penalidade de –2 dados para tentar resistir aos efeitos.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "212-213"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Cortar o Véu",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Esta Cerimônia permite ao vampiro criar um corte no Véu, através do qual aparições podem atravessar e vampiros com as Cerimônias apropriadas podem entrar fisicamente nas Terras Sombrias.</p><p>■ Pré-requisito: Praga Necrótica</p><p>■ Custo: Uma Checagem de Sangue (e Máculas adicionais)</p><p>■ Ingredientes: Um bisturi utilizado para cortar alguém vivo, giz ou carvão, um lenço de seda, um sacrifício humano.</p><p>■ Processo: O vampiro pendura o lenço em uma parede onde deseje cortar o Véu e sacrifica o humano contra ele. Após o lenço estar embebido em sangue, o vampiro o corta com o bisturi. Isso amplia a passagem entre o mundo mortal e o submundo, permitindo que espíritos atravessem mais facilmente.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: A rolagem da Cerimônia é feita com –1 de Dificuldade caso o bisturi seja utilizado no sacrifício. Devido à quantidade de sangue derramado nessa Cerimônia, o vampiro precisa resistir a um Frenesi de Fome. Em caso de Vitória, para cada sucesso na margem, a densidade do Véu é reduzida em 1 nível. Caso o Véu seja reduzido a ausente, aparições podem cruzá-lo livremente até o fim do capítulo. Depois disso, a densidade do Véu aumenta para fina e a passagem se fecha.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "213"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Chocalho da Morte",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode infligir a experiência sensorial completa da morte de um espírito em um alvo.</p><p>■ Pré-requisito: Precognição Fatal</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um grilhão de um espírito, item pessoal do alvo, garrafa de rum, vela negra, bacia de barro grande o suficiente para comportar os itens da Cerimônia.</p><p>■ Processo: É preciso estar próximo ao espírito. O grilhão e o item pessoal do alvo são colocados na bacia e banhados com o rum e o Vitae. Em seguida, a vela é acesa e sua cera deve pingar sobre os itens enquanto o nome do espírito e do alvo são repedidos em um mantra. Conforme seca, a cera forma um selo entre os itens da bacia, criando uma ponte entre o espírito e o alvo. Ao romper o selo, o rum entra em combustão e inicia uma espécie de possessão do alvo, que experiencia a morte do espírito.</p><p>■ Paradas de Dados: Determinação + Oblívio vs. Autocontrole + Determinação</p><p>■ Sistema: A rolagem da cerimônia é feita contra a Autocontrole + Determinação do alvo. Uma Vitória faz com que a vítima experiencie uma visão da morte do espírito, sendo mais ou menos vívida de acordo com a margem. Caso o espírito tenha sofrido uma morte violenta, isso causa Dano Superficial à Força de Vontade do alvo igual à margem (uma morte tranquila causa apenas 1 ponto de Dano Superficial). Uma Vitória Crítica do alvo faz com que a Cerimônia ricocheteie no conjurador.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Trails of Ash and Bones",
+        "page": "174"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Recipiente Imundo",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>O vampiro pode infectar o sangue de um alvo mortal, tornando-o venenoso para o Membro que o consumir.</p><p>■ Pré-requisito: Praga Necrótica</p><p>■ Custo: Uma Checagem de Sangue (e Mácula)</p><p>■ Ingredientes: Saliva do vampiro.</p><p>■ Processo: O vampiro precisa que apenas uma gota de sua saliva toque a pele do alvo para contaminá-lo.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: O mortal contaminado não apresenta qualquer sintoma. Um vampiro que se alimente do alvo não perceberá nada de estranho a não ser um leve sabor rançoso no sangue. Uma vez que a alimentação seja concluída, os efeitos da contaminação se manifestam. Para cada ponto de sangue bebido, ganha-se 1 ponto de Fome, tornando muito grande o risco de entrar em um Frenesi de Fome. Independentemente de um vampiro ter se alimentado dele ou não, o alvo morre na noite seguinte (podendo gerar Mácula). A única pista de seu destino é um suor de cheiro acre e aparência mofada.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "52"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Ex Nihilo",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Esta Cerimônia permite que vampiro e sua coterie acessem as Terras Sombrias, embora fazê-lo venha com grandes riscos. O vampiro que acessa o Submundo pode interagir fisicamente com espíritos. Vampiros destruídos nas Terras Sombrias desaparecem em um vórtex de sangue e cinzas, sendo sugado para o falso chão sob seus pés.</p><p>■ Pré-requisito: Espírito Minguante</p><p>■ Custo: Uma ou mais Checagens de Sangue e Força de Vontade</p><p>■ Ingredientes: Uma máscara para cada participante, um recipiente com Vitae do conjurador suficiente para lavar as solas dos pés de todos os participantes e duas moedas de qualquer valor para cada participante.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Uma Vitória permite que o vampiro e um número de companheiros igual ao número de sucessos possa entrar nas Terras Sombrias. <br><br><b>Regras das Terras Sombrias:</b> <br><ul><li>Aparições são capazes de realizar ataques físicos a vampiros, mas alguns também podem atacar especificamente sua Força de Vontade, drenando sua paixão. Resistir a esse tipo de ataque exige uma rolagem de Determinação + Autocontrole vs. Força + Briga da aparição. Esse ataque causa Dano Superficial à Força de Vontade.</li><li>Apesar de não haver sol, o vampiro precisa realizar uma Checagem de Sangue a cada 24 horas.</li><li>Vampiros nas Terras Sombrias não podem interagir de modo significativo com o mundo dos vivos, só podendo tocar ou falar com criaturas viventes ao encerrar a Cerimônia, o que exige 1 ponto de Força de Vontade e uma Checagem de Sangue em um local no qual o Véu não esteja impenetrável.</li><li>Vampiros podem utilizar suas Disciplinas nas Terras Sombrias como se estivessem no mundo dos vivos.</li><li>O Oblívio absorve indivíduos que perderam toda a sua Vitalidade ou Força de Vontade nas Terras Sombrias. Eles não se tornam aparições se destruídos.</li><li>Vampiros não podem tirar aparições das Terras Sombrias sem uma Cerimônia como Conjurar Espírito, que deve ser utilizada no mundo dos vivos para ter efeito.</li></ul></p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "213-214"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Benção Lazarena",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Esta Cerimônia permite ao necromante trazer um cadáver fresco de volta à vida, embora não da forma como seus parentes e amigos costumavam se lembrar dele.</p><p>■ Pré-requisito: Skuld Cumprido</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um sacrifício humano, incenso, o coração de qualquer mamífero, pó de prata.</p><p>■ Processo: O vampiro perfuma o ar com incenso e faz o sacrifício humano, retirando seu coração e colocando o do outro mamífero no lugar. Após colocar o pó de prata sobre os olhos abertos do alvo, o necromante convida uma aparição para possuir o corpo. Aparições não podem ser forçadas a possuir o corpo, mas poucas recusariam a oportunidade de semi-viver novamente.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Ao concluir a Cerimônia, a aparição tomará o corpo como se fosse seu. O corpo desperta com os ferimentos que causaram sua morte, recuperando apenas 1 ponto de Vitalidade (o restante dos pontos é recuperado com o tempo). O corpo possui os mesmos Atributos Físicos, Disciplinas (no caso de carniçais) e Antecedentes do corpo. Os Atributos Mentais e Sociais, Habilidades e qualquer forma de moralidade vêm da aparição. Essa possessão dura indefinidamente, até que o corpo morra novamente ou seja exorcizado.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "214"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Poço da Contemplação",
+    "type": "power",
+    "img": "Vampire%20Symbols/330px-Oblivion_symbol.png",
+    "system": {
+      "description": "<p>Somente o mais poderoso dos sacerdotes Shalim foram capazes de manifestar esta habilidade, mas o efeito é um dos mais aterrorizantes e demonstrativos usos de Oblívio visto em noites modernas. A habilidade de lançar um inimigo no Oblivion aterroriza até o Membro mais corajoso.</p><p>■ Pré-requisito: Avatar Tenebroso</p><p>■ Custo: Uma Checagem de Sangue (e Máculas adicionais)</p><p>■ Ingredientes: Um pote de tinta preta, sangue de um inocente assassinado, um cômodo não iluminado (este poder não funciona ao ar livre).</p><p>■ Processo: O vampiro mata pessoalmente o mortal inocente e utiliza pelo menos 6 litros de seu sangue para pintar uma porta em alguma das paredes do cômodo não iluminado. Finalmente, o vampiro asperge a tinta preta sobre o portal e concentra-se em abrir uma fenda para o vazio do Oblívio.</p><p>■ Paradas de Dados: Determinação + Oblívio</p><p>■ Sistema: Uma Vitória abre um portal onde a tinta se encontrou com o sangue. Qualquer objeto e indivíduo presente é sugado pelo Oblívio; para tentar escapar, é preciso passar em um teste de Destreza + Atletismo (Dif. 4). Uma vítima tragada pelo portal fica suspensa em uma infindável escuridão, incapaz de ver ou ouvir nada ao seu redor. Apenas o sacerdote que conjurou a Cerimônia pode libertar alguém preso ali. Mortais capturados pelo Oblívio morrem instantaneamente. Caso o conjurador decida atravessar o portal, fica preso ali para sempre. Alguns membros do Culto de Shalim fazem isso quando sentem que concluíram sua parte do trabalho para com o culto.</p>",
+      "bonuses": [],
+      "discipline": "ceremony",
+      "level": 5,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "94-95"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Maldição do Carcereiro",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>O alquimista se torna capaz de realizar feitos inacreditáveis de contorção e deslocamento do seu corpo, permitindo-o escapar até mesmo da mais ardilosa contenção.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue humano Sanguíneo, conteúdo de uma caixa de gordura com pelo menos duas semanas de uso constante.</p><p>■ Sistema: O alquimista pode torcer, dobrar ou esticar seu corpo para se livrar de contenções físicas. Testes de Destreza + Ladroagem com o propósito de se soltar de algemas, zip-ties e outros tipos de amarras recebem um bônus de +2 dados. Além disso, testes de Força + Briga para escapar de agarrões também recebem o bônus de +2 dados.</p><p>■ Duração: Uma cena ou até desativar</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Winter’s Teeth #10",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Sombra Portátil",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>Também chamada irreverentemente de “loção bronzeadora”, esta fórmula foi desenvolvida por Membros da Trilha do Sol para aumentar a já substancial resistência dos Sangues-Ralos à luz solar a níveis quase mortais. Apesar de não tornar o usuário completamente imune, a fórmula estende o período que ele pode se expor ao sol, mascarando qualquer possível queimadura.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue humano Sanguíneo, folhas frescas. Alguns alquimistas também adicionam diversos protetores solares, embora não haja comprovação de que isso melhora o efeito da fórmula.</p><p>■ Paradas de Dados: Vigor + Alquimia</p><p>■ Sistema: O usuário se torna capaz de resistir à luz solar sem tomar dano por um número de horas equivalente ao número de sucessos obtidos no teste. Ao pôr-do-sol, é preciso fazer o teste novamente, com uma Dificuldade igual ao número de horas passadas sob o sol. Uma Falha causa 1 ponto de Dano Superficial, enquanto uma Falha Total causa 2 pontos de Dano Agravado, fazendo com que o calor acumulado ferva o sangue nas veias do usuário.</p><p>■ Duração: Uma hora para cada sucesso</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 1,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "53"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Tempero Picante Flamejante do Red",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>Esta fórmula, descoberta acidentalmente, torna qualquer sangue ou Vitae em uma mistura potencialmente volátil. Com esta poção, é possível tornar bolsas de sangue em coquetéis molotov ou uma possível fonte de alimentação em uma armadilha mortal.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue humano Colérico, óleo de canola, suco de um limão, pimenta caiena.</p><p>■ Sistema: O alquimista adiciona a poção a qualquer quantidade de sangue ou Vitae inerte, tornando-o um líquido altamente inflamável. Embora isso não faça o sangue entrar em combustão espontânea, qualquer exposição ao fogo cria chamas que não podem ser apagadas pela duração da cena (o fogo que se alastra da poção pode ser apagado normalmente). Cada sucesso na destilação da fórmula garante uma dose da poção.</p><p>■ Duração: A fórmula é preservada até ser usada; o sangue inflamável dura uma cena</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 2,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Winter’s Teeth #10",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Criar Cinza",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>O processo de criar a droga Cinza é uma forma de Alquimia Sangue-Ralo e geralmente se dá em um laboratório ou oficina, devido à necessidade de uma chama aberta e pó de alumínio.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Cinzas de um vampiro destruído, pó de alumínio e uma chama atingindo 1500°C.</p><p>■ Paradas de Dados: Inteligência + Alquimia</p><p>■ Sistema: As cinzas do vampiro são colocadas em um recipiente esquentado pela chama e misturado ao pó de alumínio. Cada sucesso na destilação produz uma dose da droga. Em uma Falha Total, a amostra é arruinada e um Fragmento de Besta emerge na área. Quando consumida, a droga aumenta a Potência de Sangue do Sangue-Ralo a 1 até o fim do capítulo. Entretanto, a droga Cinza está longe de possuir desvantagens, levando o usuário ao vício.</p><p>■ Duração: Um capítulo</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "45"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Flashback Quimicamente Induzido",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>O processo de criar a droga Cinza é uma forma de Alquimia Sangue-Ralo e geralmente se dá em um laboratório ou oficina, devido à necessidade de uma chama aberta e pó de alumínio.</p><p>■ Pré-requisito: Criar Cinza</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Um objeto pertencente ao vampiro.</p><p>■ Sistema: Ao derreter a posse do vampiro (quanto mais importante para ele, melhor) durante a criação da Cinza, um alquimista infunde a droga com memórias do vampiro destruído. Quando consumida, esta Cinza modificada provoca um teste de Força de Vontade (Dif. 1 + Potência de Sangue do vampiro). Em uma Vitória, o Sangue-Ralo entra imediatamente em Memoriam, revivendo uma memória importante do vampiro destruído como se fosse sua. A cena é resolvida normalmente, utilizando seus próprios pontos, mas a perspectiva trocada é valiosa. Caso esteja meditando em um local calmo ao consumir a Cinza, o Sangue-Ralo adiciona +1 dado a todas as rolagens durante seu Memoriam.</p><p>■ Duração: Memoriam</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "45"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Parando a Areia Que Cai",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>Esta fórmula experimental permite ao alquimista externalizar a natureza vampírica de estar parado no tempo. Embora não tenha qualquer efeito sobre criaturas vivas, este poder pode temporariamente protelar um evento físico.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue humano Melancólico, uma pasta feita com Cannabis Indica, uma colher de chá de anticongelante.</p><p>■ Paradas de Dados: Determinação + Alquimia</p><p>■ Sistema: A mistura começa a coagular imediatamente ao ser exposta ao ar, mas pode ser vaporizada facilmente com um elemento de calor para ser inalada. Uma vez no corpo do alquimista, a substância permanece dormente até que seja ativada com uma Checagem de Sangue. Uma Vitória torna o alquimista capaz de “congelar o tempo” em um espaço de mais ou menos 1 metro de raio. O efeito dura por 1 turno, permitindo que o alquimista escape de uma bala que vem em sua direção, de destroços que o atingiriam, ou até retardar a detonação de um explosivo. É possível manter o efeito ativo ao custo de 1 ponto de Força de Vontade por turno (é preciso refazer a rolagem necessária a cada turno). A Dificuldade do teste varia de acordo com a complexidade da ação desejada.</p><p>■ Duração: Um turno</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Winter’s Teeth #10",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Queimadura Solar Sob Demanda",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>Uma temida ferramenta da Trilha do Sol, esse poder armazena luz solar no corpo do usuário, permitindo que ele a libere como uma força destruidora através de sua própria pele, queimando tanto seu alvo quanto a si mesmo. Apesar do dano causado por um único usuário não ser o suficiente para incinerar um vampiro, um grupo de Heliófilos pode levar até mesmo um ancião à perdição.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue humano Colérico, rebarbas de ouro, mercúrio, algum halogênio (normalmente cloro ou bromo). A fórmula precisa ser submetida à luz solar por várias horas antes de seu uso.</p><p>■ Sistema: Após a ativação, o alquimista se torna uma bateria de luz solar, com um uso correndo por suas veias. Ele pode descarregar isso do modo que achar melhor, infligindo dano em si mesmo e em um vampiro que esteja em contato com sua pele. O usuário recebe 2 pontos de Dano Superficial, enquanto o alvo recebe uma quantidade de Dano Superficial equivalente à sua Gravidade da Perdição (é possível reduzir isso com o uso de Fortitude). Caso a fórmula não seja ativada, o efeito se inicia automaticamente na manhã seguinte, causando os 2 níveis de Dano Superficial no Sangue-Ralo.</p><p>■ Duração: Liberação ou até a manhã seguinte</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 3,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Sabbat: the Black Hand",
+        "page": "53"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Canalização de Disciplinas",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>Simular Disciplinas é algo intrínsicamente ligado à Alquimia Sangue-Ralo, mas a habilidade de canalizar a Disciplina das cinzas de um vampiro morto é uma forma de alquimia necromântica. Aqueles que praticam esta Alquimia conseguem utilizar um dos poderes das Disciplinas do vampiro destruído, mesmo que não tenha acesso a poderes desse nível.</p><p>■ Pré-requisito: Criar Cinza</p><p>■ Custo: Uma ou mais Checagens de Sangue</p><p>■ Ingredientes: Folhas esmagadas de índigo.</p><p>■ Sistema: Ao adicionar esta fórmula durante a criação da Cinza, um alquimista infunde a droga com as habilidades do vampiro destruído. Quando consumida, esta Cinza modificada provoca um teste de Força de Vontade (Dif. 1 + Potência de Sangue do vampiro). Em uma Vitória, o Sangue-Ralo ganha o uso de 1 poder de Disciplina que o vampiro destruído possuía até o fim do capítulo. O alquimista pode requisitar um poder específico, mas o narrador tem a palavra final. Em uma Vitória Crítica, o Sangue-Ralo ganha o uso de 2 poderes de Disciplinas que o vampiro destruído possuía.</p><p>■ Duração: Um capítulo</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Cults of the Blood Gods",
+        "page": "46"
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  },
+  {
+    "name": "Saco Sem Fundo",
+    "type": "power",
+    "img": "modules/vampire-the-masquerade-5e-compendium/packs/assets/330px-Alchemy_symbol.png",
+    "system": {
+      "description": "<p>Mais próxima de um veneno que de uma poção, essa fórmula provoca o apetite da Besta de modo que nada á capaz de saciá-lo. Vampiros que tenham consumido inconscientemente essa mistura descobrirão que nenhuma quantidade de sangue, nem mesmo Vitae, é capaz de nutri-lo.</p><p>■ Custo: Uma Checagem de Sangue</p><p>■ Ingredientes: Sangue humano sem ressonância, aspirina, pó de enxofre.</p><p>■ Paradas de Dados: Inteligência + Alquimia vs. Vigor + Autocontrole</p><p>■ Sistema: Após conseguir fazer com que a fórmula entre no sistema do alvo, é feita a rolagem resistida. Uma Vitória faz com que o veneno seja ativado. O vampiro não consegue recuperar Fome até o fim da noite (ou até que entre em Frenesi de Fome). Sucessos adicionais aumentam a Fome atual do alvo.</p><p>■ Duração: Uma noite ou até o alvo entrar em Frenesi de Fome</p>",
+      "bonuses": [],
+      "discipline": "thinbloodalchemy",
+      "level": 4,
+      "dicepool": {},
+      "cost": null,
+      "macroid": "",
+      "dataItemId": "",
+      "source": {
+        "book": "Winter’s Teeth #10",
+        "page": ""
+      },
+      "selected": false
+    },
+    "effects": [],
+    "flags": {},
+    "ownership": {
+      "default": 0
+    }
+  }
+]
+
+// COLOQUE O JSON AQUI (começando com [ e terminando com ])
+
+;
+
+// 2. Função assíncrona para organizar em subpastas e importar
+async function importarComPastas() {
+    // Dicionário para traduzir o ID da disciplina
+    const nomesDisciplinas = {
+        "animalism": "Animalismo",
+        "auspex": "Auspícios",
+        "dominate": "Dominação",
+        "fortitude": "Fortitude",
+        "obfuscate": "Ofuscação",
+        "presence": "Presença",
+        "protean": "Proteanismo",
+        "bloodsorcery": "Feitiçaria de Sangue",
+        "ritual": "Rituais (Feitiçaria)",
+        "oblivion": "Oblívio",
+        "ceremony": "Cerimônias (Oblívio)",
+        "thinbloodalchemy": "Alquimia Sangue-Ralo"
+    };
+
+    // Usaremos um cache rápido para evitar que o Foundry se perca ao criar muitas pastas simultâneas
+    let cachePastas = {};
+
+    // 1. Garante a Pasta Raiz Mestre
+    const rootName = "Novas Disciplinas";
+    let rootFolder = game.folders.find(f => f.name === rootName && f.type === "Item" && (!f.folder || !f.folder.id));
+    
+    if (!rootFolder) {
+        rootFolder = await Folder.create({ name: rootName, type: "Item" });
+    }
+
+    for (let itemData of lote) {
+        // Pega os dados básicos do poder
+        let discKey = itemData.system?.discipline || "Outros";
+        let discName = nomesDisciplinas[discKey] || discKey;
+        let lvl = itemData.system?.level || 1;
+        let lvlName = "Nível " + lvl;
+
+        // 2. Garante a Pasta da Disciplina (ex: "Animalismo") dentro da raiz
+        let discFolderId = cachePastas[discName];
+        if (!discFolderId) {
+            let discFolder = game.folders.find(f => f.name === discName && f.type === "Item" && f.folder?.id === rootFolder.id);
+            if (!discFolder) {
+                discFolder = await Folder.create({ name: discName, type: "Item", folder: rootFolder.id });
+            }
+            discFolderId = discFolder.id;
+            cachePastas[discName] = discFolderId;
+        }
+
+        // 3. Garante a Pasta do Nível (ex: "Nível 1") dentro da Disciplina
+        let cacheKeyLvl = `${discName}-${lvlName}`;
+        let lvlFolderId = cachePastas[cacheKeyLvl];
+        if (!lvlFolderId) {
+            let lvlFolder = game.folders.find(f => f.name === lvlName && f.type === "Item" && f.folder?.id === discFolderId);
+            if (!lvlFolder) {
+                lvlFolder = await Folder.create({ name: lvlName, type: "Item", folder: discFolderId });
+            }
+            lvlFolderId = lvlFolder.id;
+            cachePastas[cacheKeyLvl] = lvlFolderId;
+        }
+
+        // 4. Guarda o ID da pasta do nível no próprio item antes de criá-lo
+        itemData.folder = lvlFolderId;
+    }
+
+    // Finalmente, cria os itens todos nos lugares certos
+    await Item.createDocuments(lote);
+    ui.notifications.info("Itens importados com sucesso em " + rootName + "!");
+}
+
+importarComPastas();
